@@ -14,6 +14,40 @@ font-size: 1.7rem;
 margin: 0;
 padding-left: 0.5rem;
 `;
+const NavbarStyle = styled.nav`
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 1px;
+@media (max-width: 800px) {
+    letter-spacing:0;
+}
+`;
+const NavbarDiv= styled.div`
+z-index: 1;
+display: flex;
+height: fit-content;
+background-color: #2d3d5e;
+justify-content: space-between;
+position: fixed;
+width: 100%;
+@media (max-width: 800px) {
+        bottom: 0%;
+}
+`;
+const MobileNavSpan = styled.span`
+display:none;
+@media (max-width: 800px) {
+    display: block;
+}
+`;
+const MobileNavUL = styled.ul`
+justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+     margin:  -50px 0 0 0;
+     padding: 0;
+`;
 
 class Navbar extends Component {
     constructor(props){
@@ -60,8 +94,8 @@ class Navbar extends Component {
         return (
        
         <React.Fragment>
-                <nav>
-            <div className='nav-bar'>
+                <NavbarStyle>
+            <NavbarDiv>
                         <Link className='title-link' to='/' onClick={this.HeaderIcon}>
                 <div className='div-center'>
                   <TitleStyle>Mohamed S.A</TitleStyle>
@@ -70,9 +104,9 @@ class Navbar extends Component {
                 <div className='div-center'>
                     <NavbarItems onTheme={this.ToggleTheme} onBoolean={this.state.condtion} onToggle={this.toggleNav}></NavbarItems>
                 </div>   
-            </div>
-            <span className='mobile'>
-                <ul className={MobileClass}>
+            </NavbarDiv>
+            <MobileNavSpan>
+                <MobileNavUL className={MobileClass}>
                             <NavLink activeClassName='active' className='a-link' to='/applications' onClick={this.toggleNav}>
                                 <li><TextColor>Applications</TextColor></li>
                             </NavLink>
@@ -82,10 +116,10 @@ class Navbar extends Component {
                             <NavLink activeClassName='active' className='a-link' to='/contact' onClick={this.toggleNav}>
                                 <li><TextColor>Contact</TextColor></li>
                             </NavLink>       
-                </ul>
-            </span>
+                </MobileNavUL>
+            </MobileNavSpan>
  
-        </nav>
+        </NavbarStyle>
         </React.Fragment>
          );
     }

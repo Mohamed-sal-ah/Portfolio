@@ -1,6 +1,14 @@
 import React from 'react';
-import gitIcon from './icons/github-logo.svg'
-import mailIcon from './icons/mail.svg'
+import styled from 'styled-components';
+import gitIcon from './icons/github-logo.svg';
+import mailIcon from './icons/mail.svg';
+
+const Icons = styled.img`
+width: 30px;
+padding: 0;
+margin: 0;
+height: 30px;
+`
 
 const Footer = () => {
     return ( <footer>
@@ -13,8 +21,8 @@ const Footer = () => {
             <div className="contact">
                 <h3>contact</h3>
                 <span>
-                     <a href='https://github.com/Mohmed-sal-ah'><img className='icons' src={gitIcon} alt='github icon'></img></a>
-                    <a href='https://outlook.live.com/owa/'><img className='icons' src={mailIcon} alt='mail icon'></img></a>
+                     <a href='https://github.com/Mohmed-sal-ah'><Icons className='icons' src={gitIcon} alt='github icon'></Icons></a>
+                    <a href='https://outlook.live.com/owa/'><Icons className='icons' src={mailIcon} alt='mail icon'></Icons></a>
                 </span>
                 <p>@2019 by Mohamed Salah Ahmed</p>
             </div>
