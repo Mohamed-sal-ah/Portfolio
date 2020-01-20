@@ -93,26 +93,17 @@ text-decoration: none;
  background-color:#038063;
 
 }
-
+/*
 .nav-bar{
   background-color:$bar-color;
-  height: fit-content;
 }
-
+*/
 .div-center{
   @include flex-box(row);
 }
-
-
 nav{
   font-family: $font-montserrat;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
-
-
-
 
 .nav-items{
 color:$deafult-white;
@@ -124,7 +115,6 @@ color:$deafult-white;
   position: fixed;
   width: 100%;
 }
-
 
 .nav-items{
   @include flex-box(column);
@@ -142,28 +132,17 @@ ul a{
   text-decoration: none;
 }
 
-
 li p{
   margin: 0;
 }
 
-
-
-
 .mobile-nav{
   display: none;
-
-
 }
-
 .normal-nav{
   @include flex-box(row);
   margin: 0;
   align-items: flex-start;
-}
-
-.mobile{
-  display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -217,9 +196,7 @@ li p{
   nav{
     letter-spacing: 0;
   }
-  .mobile{
-    display: block;
-  }
+
   .mobile-nav{
   display: flex;
 }
@@ -227,30 +204,18 @@ li p{
   display: none;
 }
 .mobileUL{
-    padding: 0;
+  background-color:$hover-color;
     @include flex-box(column-reverse);
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-     margin:  -50px 0 0 0;
-    background-color: #005a63;
-    opacity: 0.9;
 }
  .a-link{
    font-size: 1.5rem;
    padding: 1.2rem 0;
- }
-
-.mobileUL a{
-  width: 100%;
+   width: 100%;
   text-align: center;
-}
+ }
 .open{
   display: flex;
   height: 100%;
-
-  
   opacity: 1;
 }
 
