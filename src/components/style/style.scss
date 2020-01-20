@@ -20,7 +20,7 @@ $dark-theme: false !default;
 [theme='dark']{
   --black:#ffffff;
   --button-color: #bfbfbf;
-  --white:#000000;
+  --white:#232323;
   --dark-gray:#efecec;
   --light-gray:#333333;
   --icon-theme:invert(1);
@@ -42,6 +42,9 @@ body{
 }
 p{
   color: $deafult-black;
+}
+h3{
+  color:$deafult-black;
 }
 
 
@@ -156,6 +159,20 @@ li p{
   padding: 0;
 }
 
+
+#light-theme-icon{
+  @include transistion-time(0.2s,ease);
+  transform: rotate(0deg);
+ -webkit-transform: rotate(0deg); 
+ -moz-transform: rotate(0deg); 
+}
+#dark-theme-icon{
+  @include transistion-time(0.2s,ease);
+  transform: rotate(180deg);
+ -webkit-transform: rotate(180deg); 
+ -moz-transform: rotate(180deg); 
+}
+
 .clicked .bar-toggle .toggle-span:nth-child(1){
  transform: translateY(9px) rotate(-45deg);
  -webkit-transform: translateY(9px) rotate(-45deg); 
@@ -237,6 +254,7 @@ li p{
  .section-content{
    background-color:$deafult-white;
    margin-top: -5px;
+   border-bottom: 2px solid $dark-gray;
  }
  .color-div{
    background-color:$deafult-white
@@ -301,6 +319,7 @@ li p{
 padding-bottom:2rem;
 @include flex-box(row-reverse);
 background-color:$deafult-white;
+border-bottom: 2px solid $dark-gray;
 }
 
 .row-div{
@@ -342,7 +361,7 @@ text-align: center;
   text-transform: uppercase;
   margin: 0;
   color:$dark-gray;
-  border-bottom: 5px solid$dark-gray;
+  border-bottom: 3px solid$dark-gray;
   padding: 1rem 0;
   font-size: 2rem;
 }
@@ -376,7 +395,8 @@ text-align: center;
 
 
 #title-text{
-  border-bottom: 5px solid $dark-gray;
+  color:$dark-gray;
+  border-bottom: 3px solid $dark-gray;
  background-color: $deafult-white;
   font-family: $font-montserrat;
   }
@@ -471,7 +491,7 @@ button{
 
   #contact-title{
       background-color:$deafult-white;
-      border-bottom: 5px solid $deafult-black;
+      border-bottom: 3px solid $dark-gray;
       color:$dark-gray;
   }
 
@@ -494,9 +514,7 @@ align-items: center;
 h2{
   color:$deafult-black
 }
-h3{
-  color:$deafult-black
-}
+
 
 footer div{
   width: 50%;

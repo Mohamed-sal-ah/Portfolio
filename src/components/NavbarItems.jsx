@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import adjust from './icons/adjust.svg'
 import { NavLink } from 'react-router-dom'
 
 const MobileBar =styled.div`
@@ -20,13 +21,6 @@ const TextColor = styled.p`
 color:#ffffff;
 `;
 
-const NotMobilebtn = styled.div`
-display:block;
-@media (max-width: 800px) {
-display:block;
-}
-`;
-
 const MobileNavBtn = styled.div`
 display:none;
 @media (max-width: 800px) {
@@ -40,10 +34,21 @@ align-items: flex-start;
 `;
 const NavItems =styled.div`
 color: white;
-`
+`;
 
-const NavBarItems = ({onTheme,onToggle, onBoolean}) => {
+const ThemeBtnDiv = styled.div`
+display:flex;
+padding:0 1rem;
+`;
 
+const ThemeIcon = styled.img`
+height:30px;
+align-self:center;
+`;
+
+
+
+const NavBarItems = ({onWhichTheme,onTheme,onToggle, onBoolean}) => {
     
     return (
     <React.Fragment>
@@ -59,9 +64,9 @@ const NavBarItems = ({onTheme,onToggle, onBoolean}) => {
                 <li><TextColor>Contact</TextColor></li>
             </NavLink>   
         </NormalNav>
-        <NotMobilebtn onClick={onTheme}>
-            <p>light</p>
-        </NotMobilebtn>
+        <ThemeBtnDiv onClick={onTheme}>
+            <ThemeIcon id={onWhichTheme} src={adjust} alt="theme icon"/>
+        </ThemeBtnDiv>
         <MobileNavBtn>
             <MobileBar className={onBoolean ? 'clicked' : 'not-clicked'} onClick={() => onToggle()}>
                 <div className='bar-toggle'>

@@ -55,6 +55,7 @@ class Navbar extends Component {
         this.toggleNav=this.toggleNav.bind(this)
         this.HeaderIcon=this.HeaderIcon.bind(this)
         this.ToggleTheme=this.ToggleTheme.bind(this)
+        this.ReturnClass=this.ReturnClass.bind(this)
         this.state={condtion: false, theme:''}
     }
 
@@ -87,10 +88,19 @@ class Navbar extends Component {
         
     }
 
+    ReturnClass(theme) {
+        if (theme==='dark') {
+            return 'dark-theme-icon'
+        } else{
+            return 'light-theme-icon';
+        }
+    }
+
     render() { 
              
         const clasCondition = this.state.condtion ? ' open' : ' closed'
         const MobileClass = 'mobileUL'+clasCondition;
+        const ThemeClass = this.ReturnClass(this.state.theme)
         return (
        
         <React.Fragment>
@@ -102,7 +112,7 @@ class Navbar extends Component {
                 </div>
                 </Link>    
                 <div className='div-center'>
-                    <NavbarItems onTheme={this.ToggleTheme} onBoolean={this.state.condtion} onToggle={this.toggleNav}></NavbarItems>
+                    <NavbarItems onWhichTheme={ThemeClass} onTheme={this.ToggleTheme} onBoolean={this.state.condtion} onToggle={this.toggleNav}></NavbarItems>
                 </div>   
             </NavbarDiv>
             <MobileNavSpan>
