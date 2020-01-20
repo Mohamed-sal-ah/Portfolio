@@ -51,6 +51,42 @@ const TransperentDiv = styled.div`
         opacity:1;
   }
 `;
+const MainText = styled.p`
+margin: 0;
+text-align:center;
+padding: ${props=> props.Padding};
+font-size: 1.2rem;
+@media (max-width: 800px) {
+    padding:1rem 0;
+}
+`;
+const DivContent = styled.div`
+width: 100%;
+padding: 0 10%;
+display: block;
+text-align: center;
+@media (max-width: 800px) {
+    padding: 0 1rem;
+}
+`;
+const SubTitle = styled.h3`
+margin: 0;
+   padding-top: 2rem;
+   text-align: center;
+   font-size: 2rem;
+   text-transform: uppercase;
+`;
+
+const LinkTitle = styled.h5`
+margin: 0;
+padding: 1rem 0;
+border-bottom-left-radius: 1rem;
+border-bottom-right-radius: 1rem;
+text-align: center;
+font-size: 1rem;
+text-transform: uppercase;
+width: 100%;
+`
 
 
 class Content extends Component {
@@ -64,29 +100,26 @@ class Content extends Component {
                   <WelcomeText className='wel-text'>Welcome to My Portfolio</WelcomeText>  
                 </TransperentDiv>
             </WelcomeSection>
-            <section className='section-content'>
-                
-                <div className='div-content'>
-                
-                <p className='main-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur cum dolorem ipsum necessitatibus velit placeat vero sequi, et culpa tempore iusto ratione quam, inventore, architecto deserunt laudantium amet accusantium modi?</p>   
-                </div>
-                
+            <section className='section-content'>          
+                <DivContent>          
+                <MainText Padding='1rem 1rem'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur cum dolorem ipsum necessitatibus velit placeat vero sequi, et culpa tempore iusto ratione quam, inventore, architecto deserunt laudantium amet accusantium modi?</MainText>   
+                </DivContent>         
             </section>
             <div className='color-div'>
-                <h3>Projects</h3>
-            <p id='text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ut eveniet eligendi et, tempore tenetur laboriosam.</p>
+                <SubTitle>Projects</SubTitle>
+            <MainText Padding='1rem 25%'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ut eveniet eligendi et, tempore tenetur laboriosam.</MainText>
             <section className='section-img'>
                 <div>
                     <Link className='img-link' to='/applications'>
                             <img src={img1} alt="link to api" />
-                            <h5 className='link-title'>Projects</h5>
+                            <LinkTitle className='link-title'>Projects</LinkTitle>
                     </Link>
                     
                 </div>
                 <div>
                         <Link className='img-link' to='/about'>
                             <img src={img2} alt="link to about"/>
-                            <h5 className='link-title'>About me</h5>
+                            <LinkTitle className='link-title'>About me</LinkTitle>
                         </Link>
                     
                 </div>

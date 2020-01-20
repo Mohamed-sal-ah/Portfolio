@@ -33,7 +33,12 @@ const PaddingDiv = styled.div`
 padding:0;   
 }
 `;
-
+const IconDiv = styled.div`
+justify-content: center;
+  width: 122px;
+  text-align: center;
+  align-items: center;
+`
 
 const AboutContent = () => {
     return ( 
@@ -66,15 +71,15 @@ const AboutContent = () => {
                         
                 </div> 
                  <div className='row-div'>
-                         <div className='icon-div'>
+                         <IconDiv className='icon-div'>
                         <h2>HTML5</h2>
-                           </div>
-                        <div className='icon-div'>                      
+                           </IconDiv>
+                        <IconDiv className='icon-div'>                      
                             <h2>CSS3</h2>  
-                           </div>
-                        <div className='icon-div'>
+                           </IconDiv>
+                        <IconDiv className='icon-div'>
                             <h2>JavaScript</h2>
-                            </div>    
+                            </IconDiv>    
                            </div>  
             </section>
          
