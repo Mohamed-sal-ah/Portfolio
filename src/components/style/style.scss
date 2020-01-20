@@ -1,0 +1,761 @@
+@font-face{
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+  font-family: Montserrat;
+}
+@font-face{
+  src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+  font-family: Ubuntu;
+}
+$dark-theme: false !default;
+
+:root {
+  --white:#ffffff;
+  --black:#000000;
+  --dark-gray:#333333;
+  --light-gray:#efecec;
+  --button-color: #444444;
+  --icon-theme:invert(0);
+}
+
+[theme='dark']{
+  --black:#ffffff;
+  --button-color: #bfbfbf;
+  --white:#000000;
+  --dark-gray:#efecec;
+  --light-gray:#333333;
+  --icon-theme:invert(1);
+}
+$deafult-white:var(--white);
+$deafult-black:var(--black);
+$light-gray:var(--light-gray);
+$dark-gray:var(--dark-gray);
+$bar-color: #2d3d5e;
+$light-red:#a03e3e;
+$hover-color:#005a63;
+$boder-color:#012d2d;
+$font-montserrat: Montserrat;
+$font-ubuntu:Ubuntu;
+
+
+body{
+  margin: 0;
+}
+p{
+  color: $deafult-black;
+}
+
+
+@mixin flex-box($flex-dir) {
+  display: flex;
+  flex-direction: $flex-dir;
+}
+@mixin transistion-time($duration,$function){
+  transition-duration: $duration;
+  -webkit-transition-duration:  $duration;
+  -moz-transition-duration:  $duration;
+  transition-timing-function: $function;
+  -moz-transition-timing-function: $function;
+  -webkit-transition-timing-function: $function;
+}
+
+section{
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+p{
+    font-family: $font-ubuntu;
+}
+
+// -- NAVBAR --------------------------------------------------
+
+.title-link{
+  display: flex;
+  align-items: center;
+padding:0 1rem;
+text-decoration: none;
+}
+
+
+.a-link{
+  text-decoration: none;
+  p{
+    font-family:$font-montserrat;
+  }
+  &:hover{
+    text-decoration: none;
+  background-color:$hover-color;
+  @include transistion-time(0.2s,linear);
+}
+}
+.a-link.active{
+ background-color:#038063;
+
+}
+
+.nav-bar{
+  background-color:$bar-color;
+  height: fit-content;
+}
+
+.div-center{
+  @include flex-box(row);
+}
+
+
+nav{
+  font-family: $font-montserrat;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+
+
+.nav-items{
+color:$deafult-white;
+}
+.nav-bar{
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+
+
+.nav-items{
+  @include flex-box(column);
+  color: white;
+
+}
+
+li{
+  list-style: none;
+}
+
+ul a{
+    cursor: pointer;
+    padding: 1rem;
+  text-decoration: none;
+}
+
+
+li p{
+  margin: 0;
+}
+
+
+
+
+.mobile-nav{
+  display: none;
+
+
+}
+
+.normal-nav{
+  @include flex-box(row);
+  margin: 0;
+  align-items: flex-start;
+}
+
+.mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+.title-link{
+  padding: 0;
+  letter-spacing: -1px;
+}
+
+
+.nav-bar{
+  bottom: 0%;
+}
+
+.toggle-span{
+@include transistion-time(0.3s,ease);
+}
+
+  .bar-toggle{
+  margin: 0;
+  padding: 0;
+}
+
+
+.clicked .bar-toggle .toggle-span:nth-child(1){
+ transform: translateY(9px) rotate(-45deg);
+ -webkit-transform: translateY(9px) rotate(-45deg); 
+ -moz-transform: translateY(9px) rotate(-45deg);  
+}
+.clicked .bar-toggle .toggle-span:nth-child(2){
+ opacity: 0;
+  transform: translateX(40px) ;
+ -webkit-transform: translateX(40px) ; 
+ -moz-transform: translateX(40px) ; 
+}
+.clicked .bar-toggle .toggle-span:nth-child(3){
+ transform: translateY(-9px) rotate(45deg);
+ -webkit-transform: translateY(-9px) rotate(45deg);
+-moz-transform: translateY(-9px) rotate(45deg);;
+}
+
+
+
+  .clicked{
+ @include transistion-time(0.2s,ease);
+    background-color:$light-red;
+  }
+  .not-clicked{
+    @include transistion-time(0.2s,ease);
+  background-color: transparent;
+  }
+  nav{
+    letter-spacing: 0;
+  }
+  .mobile{
+    display: block;
+  }
+  .mobile-nav{
+  display: flex;
+}
+.normal-nav{
+  display: none;
+}
+.mobileUL{
+    padding: 0;
+    @include flex-box(column-reverse);
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+     margin:  -50px 0 0 0;
+    background-color: #005a63;
+    opacity: 0.9;
+}
+ .a-link{
+   font-size: 1.5rem;
+   padding: 1.2rem 0;
+ }
+
+.mobileUL a{
+  width: 100%;
+  text-align: center;
+}
+.open{
+  display: flex;
+  height: 100%;
+
+  
+  opacity: 1;
+}
+
+.closed{
+  height: 0;
+  opacity: 0;
+  margin:  -163px 0 0 0;
+  display: none;
+ height:0%;
+}
+
+
+.a-link{
+  background-color:$hover-color;
+  border-top: 2px solid $boder-color;
+}
+
+}
+
+// -- HOME CONTENT ------------------------------------------
+
+main{
+  @include flex-box(column);
+   justify-content: center;
+   height: fit-content;
+ }
+ section{
+   padding: 0;
+   display: flex;
+   overflow: hidden;
+   width: 100%;
+ }
+ .wel-text{
+  color:#ffffff;
+  @media (max-width: 800px) {
+    color:$deafult-black;
+}
+ }
+ .div-text{
+  background-color: #333333;
+  @media (max-width: 800px) {
+    background-color:$light-gray;
+}
+ 
+ }
+ 
+ .main-text{
+   margin: 0;
+   padding: 1.5rem 0;
+   font-size: 1.2rem;
+ }
+ 
+ .div-content {
+   width: 100%;
+   padding: 0 10%;
+   display: block;
+    text-align: center;
+ }
+ 
+ .section-content{
+   background-color:$deafult-white;
+   margin-top: -5px;
+ }
+ 
+ .color-div{
+   background-color:$deafult-white
+ }
+ .color-div h3{
+   margin: 0;
+   padding-top: 2rem;
+ 
+   font-family: $font-montserrat;
+   text-align: center;
+   font-size: 2rem;
+   text-transform: uppercase;
+ }
+ #text-center{
+      font-size: 1.2rem;
+   margin: 0;
+   text-align: center;
+   padding: 1rem 25%;
+ }
+ 
+ 
+ .section-img{
+  @include flex-box(row);
+   align-items: center;
+   
+     padding-bottom: 2rem;
+   
+ }
+ .section-img div{
+  @include flex-box(column);
+   justify-content: center;
+   padding: 1rem;
+   width: 50%;
+ }
+ 
+ .section-img div img{
+   
+   width: 100%;
+       border-top-left-radius: 1rem;
+     border-top-right-radius: 1rem;
+ }
+ .text-img{
+   margin: -18vw 0 0 0;
+   width: 20%;
+   padding: 1rem;
+   opacity: 0;
+   border-radius: 1rem;
+   align-self: center;
+    transition: ease 0.2s;
+   -webkit-transition:ease 0.2s;
+   -moz-transition:ease 0.2s;
+     background-color:$dark-gray;
+     color:$deafult-white;
+     text-align: center;
+ }
+ .img-link{
+  text-decoration: none;
+  @include flex-box(column);
+ align-items: center;
+     border-radius: 1rem;
+     background-color:$dark-gray;
+ }
+ .img-link img{
+  @include transistion-time(0.2s,linear);
+ &:hover{
+   opacity: 0.5;
+ 
+ }
+ }
+ 
+ .link-title{
+ margin: 0;
+ padding: 1rem 0;
+ border-bottom-left-radius: 1rem;
+     border-bottom-right-radius: 1rem;
+     background-color:$dark-gray;
+ color:$deafult-white;
+ text-align: center;
+     font-size: 1rem;
+ 
+ text-transform: uppercase;
+ font-family: $font-montserrat;
+ width: 100%;
+ 
+ }
+ 
+ @media only screen and (max-width: 800px) {
+ main{
+  @include flex-box(column);
+ }
+ .text-img{
+   display: none;
+ }
+ #text-center{
+   padding: 1rem;
+ 
+ }
+ 
+ .div-content{
+   padding: 0 1rem;
+ }
+ 
+ .section-img div{
+   width: 100%;
+   padding: 0 1rem;
+ }
+ 
+ main section{
+   width: 100%;
+   padding:0;
+ }
+ 
+ }
+
+// -- ABOUT -- -----------------------------------------------
+
+.about-section{
+  padding-top:4rem;
+padding-bottom:2rem;
+@include flex-box(row-reverse);
+background-color:$deafult-white;
+
+}
+
+
+.row-div{
+   @include flex-box(row);
+  justify-content: space-around;
+}
+
+.second-section{
+  @include flex-box(column);
+  background-color:$deafult-white
+ 
+}
+#center-text{
+  padding: 25% 0;
+}
+.icons-row{
+  height: 50px;
+}
+#skill-text{
+      padding: 0 20%;
+  text-align: center;
+}
+.about-title{
+  font-size:1.5rem;
+}
+
+
+.icon-div{
+  @include flex-box(column);
+  justify-content: center;
+  width: 122px;
+  text-align: center;
+  align-items: center;
+}
+.icon-div img{
+  height: 60px;
+  width: 3rem;
+}
+
+.contact-section{
+display: flex;
+padding-top: 3rem;
+justify-content: center;
+}
+
+.div-contact{
+width: 50%;
+text-align: center;
+}
+
+
+@media (max-width:800px){
+   #title-page{
+  text-transform: uppercase;
+  margin: 0;
+  color:$dark-gray;
+  border-bottom: 5px solid$dark-gray;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+   #center-text{
+       margin-top: -5px;
+       padding: 0;
+   }
+   #center-text p{
+       padding: 0 1rem;
+   }
+   .about-section{
+      padding-top:0;
+      @include flex-box(column);  
+   }
+   #skill-text{
+      padding: 0 1rem;
+   }
+   .contact-section{
+      padding: 0;
+  }
+  .div-contact{
+      width: 100%;
+  }
+  .row-div{
+    @include flex-box(column);
+  justify-content: center;
+  align-items: center;
+  }
+  
+}
+
+//-- APP-page -------------------------------------------------- 
+
+
+#title-text{
+  border-bottom: 5px solid $dark-gray;
+  font-size:2rem;
+  text-transform: uppercase;
+ background-color: $deafult-white;
+  padding:1rem;
+  margin:0;
+  width:100%;
+  font-family: $font-montserrat;
+  text-align:center;
+  }
+  
+  #api-section{
+  @include flex-box(row);
+  padding: 1rem 0 ;
+  background-color:$deafult-white
+  
+  
+  }
+  h2{
+      font-family: $font-montserrat;
+      text-transform: uppercase;
+  }
+  .box{
+      background-color: greenyellow;
+      width: 200px;
+      height: 200px;
+  }
+  
+  #api-section div{
+      text-align: center;
+      
+  }
+  .api-box{
+      display: flex;
+          width: 50%;
+      justify-content: center;
+  }
+  .api-box div{
+      padding: 0 1rem;
+  }
+  
+  
+   @media (max-width:800px){
+      #api-section{
+        @include flex-box(column);
+      } 
+      .api-box{
+          width: 100%;
+      }
+  }
+
+
+// -- CONTACT --------------------------------------------------
+
+
+%inputs{
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  outline: none;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  border: 2px solid$dark-gray;
+}
+
+.contact-section{
+  background-color:$deafult-white;
+  padding: 5rem 0;
+height: fit-content;
+@include flex-box(column);
+justify-content: center;
+align-items: center;
+}
+input{
+  @extend %inputs
+}
+textarea{
+@extend %inputs;
+margin-bottom: 1rem;
+}
+
+.contact-title{
+  font-family: $font-montserrat;
+  font-size: 2rem;
+  text-align: center;
+  color: $deafult-black;
+  height: fit-content;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+
+.contact-form{
+  @include flex-box(column);
+ height: fit-content;
+ width: 500px;
+}
+.header-input{
+  text-align: left;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  color:$deafult-black;
+  font-size: 1.2rem;
+  font-family: $font-montserrat;
+}
+button{
+  padding: 0.5rem;
+  font-family: $font-montserrat;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  outline: none;
+  border:none;
+  color: $deafult-white;
+  background-color: var(--button-color);
+  width: fit-content;
+}
+
+@media only screen and (max-width: 800px){
+  .contact-section{
+      padding: 0;
+  }
+  .contact-title{
+      padding: 1rem 0;
+      background-color:$deafult-white;
+      border-bottom: 5px solid $deafult-black;
+      color:$dark-gray;
+  }
+.contact-form{
+   width: 90%;
+   padding: 1rem 0;
+}
+}
+
+
+ // -- FOOTER ------------------------------------------------
+
+ footer{
+  margin: 0;
+  height: fit-content;
+  background-color:$light-gray;
+  color:$deafult-black;
+  @include flex-box(row);
+align-items: center;
+  padding: 2rem;
+  justify-content: space-around;
+
+}
+h2{
+  color:$deafult-black
+}
+h3{
+  color:$deafult-black
+}
+
+footer div{
+  width: 50%;
+ font-family: $font-montserrat;
+  padding: 0 1rem;
+}
+footer div:first-child{
+  text-align: center;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+footer div p{
+  font-family: $font-ubuntu;
+}
+
+footer div *{
+  padding: 0 1rem;
+  }
+  .icons{
+  filter: var(--icon-theme);
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+}
+
+  .contact{
+      align-items: center;
+      @include flex-box(column);
+      margin: 0;
+      padding: 0;
+      width: 100%;
+     
+  }
+  .contact h3{
+       font-family: $font-montserrat;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      text-align: center;
+  
+  }
+  .contact span{
+       margin: 0;
+      padding: 0;
+      @include flex-box(row);
+  }
+  .contact span p{
+      padding: 0;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      
+  }
+  .contact span p a{
+      cursor: pointer;
+      text-decoration: none;
+      color:$deafult-white;
+  }
+@media only screen and (max-width: 800px) {
+  footer{
+      padding: 4rem 0;
+      @include flex-box(column);
+  }
+
+  footer div{
+      padding: 0;
+      text-align: center;
+      width: 100%;
+  }
+  
+}
