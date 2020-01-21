@@ -56,8 +56,7 @@ class Navbar extends Component {
         this.HeaderIcon=this.HeaderIcon.bind(this)
         this.ToggleTheme=this.ToggleTheme.bind(this)
         this.ReturnID=this.ReturnID.bind(this)
-        this.getLocalstorage=this.getLocalstorage.bind(this)
-        this.state={condtion: false, theme:''}
+        this.state={condtion: false, theme:'',loadedTheme:true}
     }
 
     toggleNav (){    
@@ -72,20 +71,14 @@ class Navbar extends Component {
     }
     componentDidMount(){
         document.documentElement.setAttribute('theme','light');
-        localStorage.setItem('theme','light');
-        this.setState({theme:'light'})
-        
-    }
-    
-    getLocalstorage() {
 
+        this.setState({theme:this.getLocalstorage()})
     }
 
     ToggleTheme(){
-
         if (this.state.theme==='light') {
             this.setState({theme:'dark'});
-            document.documentElement.setAttribute('theme','dark'); 
+            document.documentElement.setAttribute('theme','dark');
         } else{
             this.setState({theme:'light'});
             document.documentElement.setAttribute('theme','light');
