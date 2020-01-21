@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import imgHead from './images/app-img.jpg';
 
+//https://www.metaweather.com/ api
 
 const ImgHead = styled.img`
 width:100%;
