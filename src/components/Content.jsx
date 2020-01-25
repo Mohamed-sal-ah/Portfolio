@@ -45,7 +45,7 @@ const TransperentDiv = styled.div`
         top: 0;
         left:0 ;
         transform: translate(0%, 0%);
-        margin-top: -4px;
+        margin-top: -5px;
         border-radius: 0;
         position: inherit;
         opacity:1;

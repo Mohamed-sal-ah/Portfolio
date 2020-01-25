@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import imgHead from './images/app-img.jpg';
 
-//https://www.metaweather.com/ api
+//openweather
 
 const ImgHead = styled.img`
 width:100%;
@@ -18,11 +18,15 @@ padding:1rem;
 const H2text = styled.h2`
 text-transform: uppercase;
 `
+const API = ''
 
 class ApplicationsContent extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { weatherdata : null }
+    }
+    componentDidMount () {
+        this.setState({weatherdata:API})
     }
     render() { 
         return (<main>
