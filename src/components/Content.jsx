@@ -58,6 +58,7 @@ padding: ${props=> props.Padding};
 font-size: 1.2rem;
 @media (max-width: 800px) {
     padding:1rem 0;
+    font-size: 1rem;
 }
 `;
 const DivContent = styled.div`
