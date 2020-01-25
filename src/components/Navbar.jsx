@@ -26,7 +26,7 @@ const NavbarDiv= styled.div`
 z-index: 1;
 display: flex;
 height: fit-content;
-background-color: #2d3d5e;
+background-color: #1b2438;
 justify-content: space-between;
 position: fixed;
 width: 100%;
