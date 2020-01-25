@@ -47,6 +47,7 @@ justify-content: flex-start;
     width: 100%;
      margin:  -50px 0 0 0;
      padding: 0;
+     z-index: 1;
 `;
 
 class Navbar extends Component {

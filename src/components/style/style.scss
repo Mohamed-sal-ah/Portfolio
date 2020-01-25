@@ -162,15 +162,15 @@ li p{
 
 #light-theme-icon{
   @include transistion-time(0.2s,ease);
-  transform: rotate(0deg);
- -webkit-transform: rotate(0deg); 
- -moz-transform: rotate(0deg); 
+  transform: rotateY(0deg);
+ -webkit-transform: rotateY(0deg); 
+ -moz-transform: rotateY(0deg); 
 }
 #dark-theme-icon{
   @include transistion-time(0.2s,ease);
-  transform: rotate(180deg);
- -webkit-transform: rotate(180deg); 
- -moz-transform: rotate(180deg); 
+  transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg); 
+ -moz-transform: rotateY(180deg); 
 }
 
 .clicked .bar-toggle .toggle-span:nth-child(1){
