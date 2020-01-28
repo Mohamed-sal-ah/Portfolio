@@ -13,6 +13,9 @@ color:#ffffff;
 font-size: 1.7rem;
 margin: 0;
 padding-left: 0.5rem;
+@media (max-width: 800px) {
+    font-size:1.5rem
+}
 `;
 const NavbarStyle = styled.nav`
 text-transform: uppercase;
@@ -26,7 +29,7 @@ const NavbarDiv= styled.div`
 z-index: 1;
 display: flex;
 height: fit-content;
-background-color: #1b2438;
+background-color: #27375a;
 justify-content: space-between;
 position: fixed;
 width: 100%;
