@@ -34,10 +34,26 @@ padding:0;
 }
 `;
 const IconDiv = styled.div`
-justify-content: center;
-  width: 122px;
+justify-content: space-between;
+  width: 100%;
   text-align: center;
   align-items: center;
+  @media (max-width:800px){
+    justify-content: space-between;
+  }
+`;
+const DivWidth = styled.div`
+width:50%;
+padding:1rem;
+@media (max-width:800px){
+    width:100%;
+    padding:0;
+}
+`;
+
+const DivBar = styled.div`
+width:${props => props.BarWidth};
+background-color:${props => props.BarColor};
 `
 
 const AboutContent = () => {
@@ -62,25 +78,34 @@ const AboutContent = () => {
             </section>
             <section className='second-section'>
             
-                   <div>
+                   <DivWidth>
                        <PaddingDiv id='skill-text'>
                         <AboutTitle FontSize='1.8rem'>My Skills</AboutTitle>
                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, nam excepturi, esse doloribus reiciendis vel dolorem repellat repellendus.</p>
                        </PaddingDiv> 
                       
                         
-                </div> 
-                 <div className='row-div'>
+                </DivWidth> 
+                 <DivWidth className='row-div'>
                          <IconDiv className='icon-div'>
                         <h2>HTML5</h2>
+                        <div className='progress'>
+                            <DivBar BarColor='#f26524' BarWidth='95%' className='pr-bar'></DivBar>
+                        </div>
                            </IconDiv>
                         <IconDiv className='icon-div'>                      
-                            <h2>CSS3</h2>  
+                            <h2>CSS3</h2>
+                            <div className='progress'>
+                            <DivBar BarColor='#2465f1' BarWidth='95%' className='pr-bar'></DivBar>
+                        </div>  
                            </IconDiv>
                         <IconDiv className='icon-div'>
                             <h2>JavaScript</h2>
+                            <div className='progress'>
+                            <DivBar BarColor='#f7e018' BarWidth='85%' className='pr-bar'></DivBar>
+                        </div>
                             </IconDiv>    
-                           </div>  
+                           </DivWidth>  
             </section>
          
         </main>

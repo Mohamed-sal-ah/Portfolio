@@ -319,14 +319,10 @@ background-color:$deafult-white;
 border-bottom: 2px solid $dark-gray;
 }
 
-.row-div{
-   @include flex-box(row);
-  justify-content: space-around;
-}
-
 .second-section{
-  @include flex-box(column);
-  background-color:$deafult-white
+  @include flex-box(row);
+  background-color:$deafult-white;
+  padding-bottom: 3rem;
  
 }
 #center-text{
@@ -336,15 +332,22 @@ border-bottom: 2px solid $dark-gray;
   height: 50px;
 }
 #skill-text{
-      padding: 0 20%;
+      padding: 0 1rem;
   text-align: center;
 }
-.icon-div{
+.row-div{
   @include flex-box(column);
+ justify-content: space-around;
+}
+.icon-div{
+  @include flex-box(row);
 }
 .icon-div img{
   height: 60px;
   width: 3rem;
+}
+.icon-div h2{
+  font-family: $font-montserrat;
 }
 
 .div-contact{
@@ -352,6 +355,19 @@ width: 50%;
 text-align: center;
 }
 
+.progress{
+  height: 2rem;
+  border-radius: 2rem;
+  width: 70%;
+background-color: #8c8c8c;
+}
+
+.pr-bar{
+  width: 50%;
+  height: 100%;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
 
 @media (max-width:800px){
    #title-page{
@@ -385,7 +401,15 @@ text-align: center;
   justify-content: center;
   align-items: center;
   }
-  
+  .second-section{
+    @include flex-box(column);
+  }
+  .progress{
+    width: 90%;
+  }
+  .icon-div{
+    @include flex-box(column);
+  }
 }
 
 //-- APP-page -------------------------------------------------- 
