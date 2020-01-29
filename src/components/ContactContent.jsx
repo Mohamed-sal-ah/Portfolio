@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import {Button, Form} from 'muicss/react';
+
 
 const ContactSection = styled.section`
 padding: 5rem 0;
@@ -29,23 +31,8 @@ text-align: left;
   margin: 0;
   font-size: 1.2rem;
 `;
- const ContactForm = styled.form`
- height: fit-content;
- width: 500px;
- @media (max-width: 800px) {
-    width: 90%;
-    padding: 1rem 0;
-}
- `;
 
- const Button = styled.button`
- padding: 0.5rem;
- font-size: 1.2rem;
-  text-transform: uppercase;
-  outline: none;
-  border:none;
-  width: fit-content;
- `
+
 
 class ContactContent extends Component {
     constructor(props) {
@@ -68,7 +55,7 @@ class ContactContent extends Component {
         return (<main>
             <ContactSection className='contact-section'>
                 <ContactTitle id='contact-title'>Contact</ContactTitle>
-                <ContactForm id='contact-form'>
+                <Form id='contact-form'>
                     <HeaderInput className='header-input'>Email</HeaderInput>
                     <input onChange={this.onChange} type='text' name="email" />
                     <HeaderInput className='header-input'>Subject</HeaderInput>
@@ -76,8 +63,8 @@ class ContactContent extends Component {
                     <HeaderInput className='header-input'>Message</HeaderInput>
                     <textarea value={this.state.message} onChange={this.onChange} type='text' name='message' id='text-area' rows='4' cols='50'>
                     </textarea>
-                    <Button type='submit' onClick={this.Submit}>Submit</Button>
-                </ContactForm>
+                    <Button variant="raised" className='button1' type='submit' onClick={this.Submit}>Submit</Button>    
+                </Form>
             </ContactSection>
         </main>);
     }
@@ -99,7 +86,7 @@ const ContactContent = () => {
                 <h4 className='header-input'>Message</h4>
                 <textarea type='text' name='message' id='text-area' rows='4' cols='50'>
                 </textarea>
-                <button>Submit</button>
+                <Button1a>Submit</Button1a>
                </form>
         </section>
     </main> );

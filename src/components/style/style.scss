@@ -1,3 +1,5 @@
+@import '../../../node_modules/muicss/lib/sass/mui-colors.scss';
+
 @font-face{
   src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
   font-family: Montserrat;
@@ -19,7 +21,7 @@ $dark-theme: false !default;
 
 [theme='dark']{
   --black:#ffffff;
-  --button-color: #bfbfbf;
+  --button-color: #dcdcdc;
   --white:#232323;
   --dark-gray:#efecec;
   --light-gray:#333333;
@@ -87,8 +89,12 @@ p{
   align-items: center;
 padding:0 1rem;
 text-decoration: none;
-}
 
+}
+a:hover{
+  color: transparent;
+  text-decoration: none;
+}
 .a-link{
   text-decoration: none;
   p{
@@ -239,6 +245,7 @@ li p{
 
  .wel-text{
   color:#ffffff;
+  line-height: normal;
   @media (max-width: 800px) {
     color:$deafult-black;
 }
@@ -487,26 +494,33 @@ textarea{
 margin-bottom: 1rem;
 }
 
-#contact-title{
-  font-family: $font-montserrat;
 
-  color: $deafult-black;
-
-
-}
 
 #contact-form{
   @include flex-box(column);
+  height: fit-content;
+  width: 500px;
+  @media (max-width: 800px) {
+     width: 90%;
+     padding: 1rem 0;
+ }
 }
 .header-input{
   color:$deafult-black;
   font-family: $font-montserrat;
 }
-button{
+.button1{
   font-family: $font-montserrat;
-  color: $deafult-white;
-  background-color: var(--button-color);
+  color: mui-color('grey','50');;
+  background-color: mui-color('grey','700');
 }
+button{
+  padding: 0.5rem;
+ font-size: 1.2rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
 
 @media only screen and (max-width: 800px){
 
