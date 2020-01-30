@@ -43,16 +43,23 @@ margin-bottom: 1rem;
   color:$deafult-black;
   font-family: $font-montserrat;
 }
-.button1{
+
+button{
   font-family: $font-montserrat;
   color: $deafult-white;
   background-color:$button-color;
-}
-button{
   padding: 0.5rem;
+
  font-size: 1.2rem;
   text-transform: uppercase;
-  width: fit-content;
+  width: fit-content; 
+  cursor: pointer;
+  &:hover{
+    padding: 0.4rem;
+    border: 0.1rem solid $dark-gray;
+    color:$deafult-black;
+    background-color: $light-gray;
+  }
 }
 
 @media only screen and (max-width: 800px){

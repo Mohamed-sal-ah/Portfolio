@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import NavbarItems from './NavbarItems';
 import {NavLink} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import './style/nav.scss'
 
 const TextColor = styled.p`
 color:#ffffff;

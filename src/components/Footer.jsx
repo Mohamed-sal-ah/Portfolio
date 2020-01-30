@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import gitIcon from './icons/github-logo.svg';
 import mailIcon from './icons/mail.svg';
+import './style/footer.scss'
 
 const Icons = styled.img`
 width: 30px;

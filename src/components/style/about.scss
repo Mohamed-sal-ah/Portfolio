@@ -1,0 +1,102 @@
+@import './style.scss';
+
+.about-section{
+    padding-top:4rem;
+  padding-bottom:2rem;
+  @include flex-box(row-reverse);
+  background-color:$deafult-white;
+  border-bottom: 2px solid $dark-gray;
+  }
+  
+  .second-section{
+    @include flex-box(row);
+    background-color:$deafult-white;
+    padding-bottom: 3rem;
+   
+  }
+  #center-text{
+    padding: 25% 0;
+  }
+  .icons-row{
+    height: 50px;
+  }
+  #skill-text{
+        padding: 0 1rem;
+    text-align: center;
+  }
+  .row-div{
+    @include flex-box(column);
+   justify-content: space-around;
+  }
+  .icon-div{
+    @include flex-box(row);
+  }
+  .icon-div img{
+    height: 60px;
+    width: 3rem;
+  }
+  .icon-div h2{
+    font-family: $font-montserrat;
+  }
+  
+  .div-contact{
+  width: 50%;
+  text-align: center;
+  }
+  
+  .progress{
+    height: 2rem;
+    border-radius: 2rem;
+    width: 70%;
+  background-color: #8c8c8c;
+  }
+  
+  .pr-bar{
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+  
+  @media (max-width:800px){
+     #title-page{
+    text-transform: uppercase;
+    margin: 0;
+    color:$dark-gray;
+    border-bottom: 3px solid$dark-gray;
+    padding: 1rem 0;
+    font-size: 2rem;
+  }
+     #center-text{
+         margin-top: -5px;
+         padding: 0;
+     }
+     #center-text p{
+         padding: 0 1rem;
+     }
+     .about-section{
+        padding-top:0;
+        @include flex-box(column);  
+     }
+     #skill-text{
+        padding: 0 1rem;
+     }
+  
+    .div-contact{
+        width: 100%;
+    }
+    .row-div{
+      @include flex-box(column);
+    justify-content: center;
+    align-items: center;
+    }
+    .second-section{
+      @include flex-box(column);
+    }
+    .progress{
+      width: 90%;
+    }
+    .icon-div{
+      @include flex-box(column);
+    }
+  }

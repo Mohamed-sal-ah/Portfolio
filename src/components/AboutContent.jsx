@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import img1 from './images/aboutImg.jpg'
+import img1 from './images/aboutImg.jpg';
+import './style/about.scss'
 
 
 

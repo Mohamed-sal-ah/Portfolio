@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import imgHead from './images/app-img.jpg';
+import './style/app.scss';
 
 //openweather
 

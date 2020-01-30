@@ -80,7 +80,7 @@ class ContactContent extends Component {
                     <HeaderInput className='header-input'>Message</HeaderInput>
                     <textarea value={this.state.message} onChange={this.onChange} type='text' name='message' id='text-area' rows='4' cols='50'>
                     </textarea>
-                    <Button variant="raised" className='button1' type='submit' onClick={this.Submit}>Submit</Button>    
+                    <Button type='submit' onClick={this.Submit}>Submit</Button>    
                 </ContactForm>
             </ContactSection>
         </main>);
