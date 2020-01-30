@@ -1,4 +1,3 @@
-@import '../../../node_modules/muicss/lib/sass/mui-colors.scss';
 
 @font-face{
   src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
@@ -31,6 +30,7 @@ $deafult-white:var(--white);
 $deafult-black:var(--black);
 $light-gray:var(--light-gray);
 $dark-gray:var(--dark-gray);
+$button-color:var(--button-color);
 $light-red:#a03e3e;
 $hover-color:#005a63;
 $boder-color:#012d2d;
@@ -470,67 +470,6 @@ background-color: #8c8c8c;
 
 // -- CONTACT --------------------------------------------------
 
-
-%inputs{
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  outline: none;
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  border: 2px solid$dark-gray;
-}
-
-.contact-section{
-  background-color:$deafult-white;
-@include flex-box(column);
-
-}
-input{
-  @extend %inputs
-}
-textarea{
-@extend %inputs;
-margin-bottom: 1rem;
-}
-
-
-
-#contact-form{
-  @include flex-box(column);
-  height: fit-content;
-  width: 500px;
-  @media (max-width: 800px) {
-     width: 90%;
-     padding: 1rem 0;
- }
-}
-.header-input{
-  color:$deafult-black;
-  font-family: $font-montserrat;
-}
-.button1{
-  font-family: $font-montserrat;
-  color: mui-color('grey','50');;
-  background-color: mui-color('grey','700');
-}
-button{
-  padding: 0.5rem;
- font-size: 1.2rem;
-  text-transform: uppercase;
-  width: fit-content;
-}
-
-
-@media only screen and (max-width: 800px){
-
-  #contact-title{
-      background-color:$deafult-white;
-      border-bottom: 3px solid $dark-gray;
-      color:$dark-gray;
-  }
-
-}
 
 
  // -- FOOTER ------------------------------------------------
