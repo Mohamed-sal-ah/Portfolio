@@ -1,11 +1,11 @@
 import React from 'react';
 import './components/style/style.scss'
 import Navbar from './components/Navbar.jsx'
-import Home from './Home.js'
+import Home from './components/Home'
 import Footer from './components/Footer'
-import About from './About'
-import Applications from './Applications'
-import Contact from './Contact'
+import About from './components/About'
+import Applications from './components/Applications'
+import Contact from './components/Home'
 
 
 

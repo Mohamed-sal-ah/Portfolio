@@ -91,7 +91,7 @@ width: 100%;
 `
 
 
-class Content extends Component {
+class Home extends Component {
     state = {  }
     render() { 
         return (<main>
@@ -132,4 +132,4 @@ class Content extends Component {
     }
 }
  
-export default Content;
+export default Home;

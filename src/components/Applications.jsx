@@ -24,7 +24,7 @@ text-transform: uppercase;
 const API = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057/2020/1/30/'
 
 
-class ApplicationsContent extends Component {
+class Applications extends Component {
     constructor(props) {
         super(props);
         this.state = { weatherdata : '' }
@@ -56,7 +56,7 @@ class ApplicationsContent extends Component {
     }
 }
  
-export default ApplicationsContent;
+export default Applications;
 
 /*
 const ApplicationsContent = () => {

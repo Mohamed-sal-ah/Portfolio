@@ -51,7 +51,7 @@ font-size: 1.2rem;
 `
 
 
-class ContactContent extends Component {
+class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -87,7 +87,7 @@ class ContactContent extends Component {
     }
 }
 
-export default ContactContent;
+export default Contact;
 
 /*
 
