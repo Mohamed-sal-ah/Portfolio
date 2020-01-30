@@ -5,7 +5,7 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import About from './components/About'
 import Applications from './components/Applications'
-import Contact from './components/Home'
+import Contact from './components/Contact'
 
 
 
