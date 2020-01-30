@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import imgHead from './images/app-img.jpg';
+import './style/app.scss';
 
 //openweather
 
@@ -23,10 +24,12 @@ const API = ''
 class ApplicationsContent extends Component {
     constructor(props) {
         super(props);
-        this.state = { weatherdata : null }
+        this.state = { weatherdata : '' }
     }
     componentDidMount () {
-        this.setState({weatherdata:API})
+        fetch(API)
+        .then(response => response.json())
+        .then(data => this.setState({weatherdata:data}))
     }
     render() { 
         return (<main>

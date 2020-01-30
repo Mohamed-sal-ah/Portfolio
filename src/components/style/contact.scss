@@ -1,0 +1,73 @@
+@import './style.scss';
+
+
+%inputs{
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  outline: none;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  border: 2px solid $dark-gray;
+}
+#contact-title{
+  color: $deafult-black;
+  font-family: $font-montserrat;
+}
+
+.contact-section{
+  background-color:$deafult-white;
+@include flex-box(column);
+
+}
+input{
+  @extend %inputs
+}
+textarea{
+@extend %inputs;
+margin-bottom: 1rem;
+}
+
+
+
+#contact-form{
+  @include flex-box(column);
+  height: fit-content;
+  width: 500px;
+  @media (max-width: 800px) {
+     width: 90%;
+     padding: 1rem 0;
+ }
+}
+.header-input{
+  color:$deafult-black;
+  font-family: $font-montserrat;
+}
+
+button{
+  font-family: $font-montserrat;
+  color: $deafult-white;
+  background-color:$button-color;
+  padding: 0.5rem;
+
+ font-size: 1.2rem;
+  text-transform: uppercase;
+  width: fit-content; 
+  cursor: pointer;
+  &:hover{
+    padding: 0.4rem;
+    border: 0.1rem solid $dark-gray;
+    color:$deafult-black;
+    background-color: $light-gray;
+  }
+}
+
+@media only screen and (max-width: 800px){
+
+  #contact-title{
+      background-color:$deafult-white;
+      border-bottom: 3px solid $dark-gray;
+      color:$dark-gray;
+  }
+
+}

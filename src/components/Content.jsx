@@ -4,6 +4,7 @@ import image from './images/mainImg.jpg';
 import img1 from './images/img1.jpg'
 import img2 from './images/img2.jpg'
 import { Link } from 'react-router-dom'
+import './style/home.scss'
 
 
 const WelcomeSection = styled.section`

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import './style/contact.scss'
+
+
 
 const ContactSection = styled.section`
 padding: 5rem 0;
@@ -22,6 +25,14 @@ margin: 0;
 }
 `;
 
+const ContactForm = styled.form`
+height: fit-content;
+width: 500px;
+@media (max-width: 800px) {
+   width: 90%;
+   padding: 1rem 0;
+}
+`;
 const HeaderInput = styled.h4`
 text-align: left;
   padding-top: 1.5rem;
@@ -29,23 +40,16 @@ text-align: left;
   margin: 0;
   font-size: 1.2rem;
 `;
- const ContactForm = styled.form`
- height: fit-content;
- width: 500px;
- @media (max-width: 800px) {
-    width: 90%;
-    padding: 1rem 0;
-}
- `;
 
- const Button = styled.button`
- padding: 0.5rem;
- font-size: 1.2rem;
-  text-transform: uppercase;
-  outline: none;
-  border:none;
-  width: fit-content;
- `
+const Button = styled.button`
+padding: 0.5rem;
+font-size: 1.2rem;
+ text-transform: uppercase;
+ outline: none;
+ border:none;
+ width: fit-content;
+`
+
 
 class ContactContent extends Component {
     constructor(props) {
@@ -76,7 +80,7 @@ class ContactContent extends Component {
                     <HeaderInput className='header-input'>Message</HeaderInput>
                     <textarea value={this.state.message} onChange={this.onChange} type='text' name='message' id='text-area' rows='4' cols='50'>
                     </textarea>
-                    <Button type='submit' onClick={this.Submit}>Submit</Button>
+                    <Button type='submit' onClick={this.Submit}>Submit</Button>    
                 </ContactForm>
             </ContactSection>
         </main>);
@@ -99,7 +103,7 @@ const ContactContent = () => {
                 <h4 className='header-input'>Message</h4>
                 <textarea type='text' name='message' id='text-area' rows='4' cols='50'>
                 </textarea>
-                <button>Submit</button>
+                <Button1a>Submit</Button1a>
                </form>
         </section>
     </main> );

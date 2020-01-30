@@ -1,0 +1,88 @@
+@import './style.scss';
+
+footer{
+    margin: 0;
+    height: fit-content;
+    background-color:$light-gray;
+    color:$deafult-black;
+    @include flex-box(row);
+  align-items: center;
+    padding: 2rem;
+    justify-content: space-around;
+  
+  }
+  h2{
+    color:$deafult-black
+  }
+  
+  
+  footer div{
+    width: 50%;
+   font-family: $font-montserrat;
+    padding: 0 1rem;
+  }
+  footer div:first-child{
+    text-align: center;
+  }
+  
+  h1{
+    text-transform: uppercase;
+  }
+  
+  footer div p{
+    font-family: $font-ubuntu;
+  }
+  
+  footer div *{
+    padding: 0 1rem;
+    }
+    .icons{
+    filter: var(--icon-theme);
+  }
+  
+    .contact{
+        align-items: center;
+        @include flex-box(column);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+       
+    }
+    .contact h3{
+         font-family: $font-montserrat;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        text-align: center;
+    
+    }
+    .contact span{
+         margin: 0;
+        padding: 0;
+        @include flex-box(row);
+    }
+    .contact span p{
+        padding: 0;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        
+    }
+    .contact span p a{
+        cursor: pointer;
+        text-decoration: none;
+        color:$deafult-white;
+    }
+  @media only screen and (max-width: 800px) {
+    footer{
+        padding: 4rem 0;
+        @include flex-box(column);
+    }
+  
+    footer div{
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+  } 
