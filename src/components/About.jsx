@@ -57,7 +57,7 @@ width:${props => props.BarWidth};
 background-color:${props => props.BarColor};
 `
 
-const AboutContent = () => {
+const About = () => {
     return ( 
         <main>
 
@@ -114,4 +114,4 @@ const AboutContent = () => {
      );
 }
  
-export default AboutContent;
+export default About;

@@ -21,7 +21,7 @@ text-transform: uppercase;
 `
 const API = ''
 
-class ApplicationsContent extends Component {
+class Applications extends Component {
     constructor(props) {
         super(props);
         this.state = { weatherdata : '' }
@@ -52,7 +52,7 @@ class ApplicationsContent extends Component {
     }
 }
  
-export default ApplicationsContent;
+export default Applications;
 
 /*
 const ApplicationsContent = () => {
