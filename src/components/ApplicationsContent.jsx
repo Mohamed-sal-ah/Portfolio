@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import imgHead from './images/app-img.jpg';
 import './style/app.scss';
 
-//openweather
+//metaweather
 
 const ImgHead = styled.img`
 width:100%;
@@ -19,13 +19,17 @@ padding:1rem;
 const H2text = styled.h2`
 text-transform: uppercase;
 `
-const API = ''
+
+
+const API = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057/2020/1/30/'
+
 
 class ApplicationsContent extends Component {
     constructor(props) {
         super(props);
         this.state = { weatherdata : '' }
     }
+
     componentDidMount () {
         fetch(API)
         .then(response => response.json())
