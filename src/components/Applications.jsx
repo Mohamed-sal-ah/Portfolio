@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import imgHead from './images/app-img.jpg';
 import './style/app.scss';
 
-//openweather
+//metaweather
 
 const ImgHead = styled.img`
 width:100%;
@@ -19,19 +19,48 @@ padding:1rem;
 const H2text = styled.h2`
 text-transform: uppercase;
 `
-const API = ''
+
+//www.metaweather.com
+const API = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057'
+
 
 class Applications extends Component {
     constructor(props) {
         super(props);
+        this.ConvertToMetric=this.ConvertToMetric.bind(this);
         this.state = { weatherdata : '' }
+    }
+    ConvertToMetric (speed) {
+        const MetricWind = speed*1.609344;
+        const MeterWind = MetricWind/3.6
+        return Math.floor(MeterWind);
     }
     componentDidMount () {
         fetch(API)
         .then(response => response.json())
-        .then(data => this.setState({weatherdata:data}))
+        .then(data => this.setState({weatherdata:data.consolidated_weather[0]}))
     }
     render() { 
+        let weatherData;
+        //const divData = <div className='api-box'><div className='box'></div> </div>;
+        
+        if (this.state.weatherdata) {
+            const data = this.state.weatherdata
+            const imgsrc = 'https://www.metaweather.com/static/img/weather/'+data.weather_state_abbr+'.svg';
+        weatherData = <div className='weather'>
+            <div className='weather-main'>
+            <img id='weather-img' src={imgsrc} alt='weather-symbol'/>
+            <p id='weather-text'>{Math.floor(data.the_temp)}°C</p>
+            </div>
+        <p>Max : {Math.floor(data.max_temp)}°C</p>
+        <p>Min : {Math.floor(data.min_temp)}°C</p>
+        <p>Wind speed: {this.ConvertToMetric(data.wind_speed)}m/s in {data.wind_direction_compass} direction</p>
+            </div>;
+        }
+        else {
+            weatherData= <div><p>Loading...</p></div>
+        }
+        
         return (<main>
             <ImgHead src={imgHead} alt="header img" />
             <section>
@@ -45,36 +74,12 @@ class Applications extends Component {
                     </div>
                 </div>
                 <div className='api-box'>
-                    <div className='box'></div>
+                    {weatherData} 
                 </div>
+               
             </section>
         </main>  );
     }
 }
  
 export default Applications;
-
-/*
-const ApplicationsContent = () => {
-    return ( <main> 
-        <ImgHead src={imgHead} alt="header img"/>
-        <section>
-               <h3 id='title-text'>Applications</h3> 
-        </section>
-       <section id='api-section'>
-           <div className='api-box'>
-               <div>
-               <h2>weather api</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatem, architecto perferendis a doloribus modi quaerat quos voluptate quae ducimus repudiandae! Nemo beatae minus</p>    
-               </div>
-            
-           </div>
-            <div className='api-box'> 
-            <div className='box'></div>
-           </div>
-       </section>
-    </main> );
-}
- 
-export default ApplicationsContent;
-*/
