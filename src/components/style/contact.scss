@@ -8,11 +8,16 @@
   margin: 0;
   border-radius: 0;
   border: none;
-  border: 2px solid $dark-gray;
+  border: 2px solid #7c7c7c;
 }
 #contact-title{
   color: $deafult-black;
   font-family: $font-montserrat;
+  @media (max-width: 800px) {
+    background-color:$deafult-white;
+    border-bottom: 3px solid $dark-gray;
+    color:$dark-gray;
+  }
 }
 
 .contact-section{
@@ -27,9 +32,6 @@ textarea{
 @extend %inputs;
 margin-bottom: 1rem;
 }
-
-
-
 #contact-form{
   @include flex-box(column);
   height: fit-content;
@@ -62,12 +64,3 @@ button{
   }
 }
 
-@media only screen and (max-width: 800px){
-
-  #contact-title{
-      background-color:$deafult-white;
-      border-bottom: 3px solid $dark-gray;
-      color:$dark-gray;
-  }
-
-}

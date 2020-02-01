@@ -17,7 +17,7 @@ margin: 5px 0;
 border-radius: 5px;
 height: 4px;
 `;
-const TextColor = styled.p`
+const TextColorWhite = styled.p`
 color:#ffffff;
 `;
 
@@ -31,6 +31,10 @@ display:flex;
 const NormalNav = styled.ul`
 margin: 0;
 align-items: flex-start;
+@media (max-width: 800px) {
+    display:none;
+}
+
 `;
 const NavItems =styled.div`
 color: white;
@@ -45,7 +49,10 @@ const ThemeIcon = styled.img`
 height:30px;
 align-self:center;
 `;
-
+const BarToggle = styled.div`
+margin: 0;
+    padding: 0;
+`
 
 
 const NavBarItems = ({onWhichTheme,onTheme,onToggle, onBoolean}) => {
@@ -55,13 +62,13 @@ const NavBarItems = ({onWhichTheme,onTheme,onToggle, onBoolean}) => {
     <NavItems className='nav-items'>
         <NormalNav className='normal-nav'> 
             <NavLink activeClassName='active' className='a-link' to='/applications'>
-                <li><TextColor>Applications</TextColor></li>
+                <li><TextColorWhite>Applications</TextColorWhite></li>
             </NavLink>
             <NavLink activeClassName='active' className='a-link' to='/about'>
-                <li><TextColor>About</TextColor></li>
+                <li><TextColorWhite>About</TextColorWhite></li>
             </NavLink>
             <NavLink activeClassName='active' className='a-link' to='/contact'>
-                <li><TextColor>Contact</TextColor></li>
+                <li><TextColorWhite>Contact</TextColorWhite></li>
             </NavLink>   
         </NormalNav>
         <ThemeBtnDiv onClick={onTheme}>
@@ -69,11 +76,11 @@ const NavBarItems = ({onWhichTheme,onTheme,onToggle, onBoolean}) => {
         </ThemeBtnDiv>
         <MobileNavBtn>
             <MobileBar className={onBoolean ? 'clicked' : 'not-clicked'} onClick={() => onToggle()}>
-                <div className='bar-toggle'>
+                <BarToggle className='bar-toggle'>
                     <ToggleSpan className='toggle-span'></ToggleSpan>
                     <ToggleSpan className='toggle-span'></ToggleSpan>
                     <ToggleSpan className='toggle-span'></ToggleSpan>
-                </div>
+                </BarToggle>
             </MobileBar>
             
         </MobileNavBtn>

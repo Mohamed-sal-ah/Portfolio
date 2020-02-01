@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import imgHead from './images/app-img.jpg';
+import imgHead from './images/weather-img.jpg';
 import './style/app.scss';
 
 //metaweather
@@ -16,12 +16,22 @@ padding:1rem;
   font-size:2rem;
   text-transform: uppercase;
 `;
-const H2text = styled.h2`
+const ContentTilte = styled.h2`
 text-transform: uppercase;
+`;
+
+const WeatherImg = styled.img`
+    height: 7rem;
+    width: 7rem;
+`;
+
+const Temptext = styled.p`
+font-size: 2.5rem;
+padding-left: 0.5rem;
 `
 
-//www.metaweather.com
-const API = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057'
+//www.metaweather.com https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057
+const API = ''
 
 
 class Applications extends Component {
@@ -41,16 +51,14 @@ class Applications extends Component {
         .then(data => this.setState({weatherdata:data.consolidated_weather[0]}))
     }
     render() { 
-        let weatherData;
-        //const divData = <div className='api-box'><div className='box'></div> </div>;
-        
+        let weatherData;        
         if (this.state.weatherdata) {
             const data = this.state.weatherdata
             const imgsrc = 'https://www.metaweather.com/static/img/weather/'+data.weather_state_abbr+'.svg';
         weatherData = <div className='weather'>
             <div className='weather-main'>
-            <img id='weather-img' src={imgsrc} alt='weather-symbol'/>
-            <p id='weather-text'>{Math.floor(data.the_temp)}°C</p>
+            <WeatherImg id='weather-img' src={imgsrc} alt='weather-symbol'/>
+            <Temptext id='weather-text'>{Math.floor(data.the_temp)}°C</Temptext>
             </div>
         <p>Max : {Math.floor(data.max_temp)}°C</p>
         <p>Min : {Math.floor(data.min_temp)}°C</p>
@@ -69,7 +77,7 @@ class Applications extends Component {
             <section id='api-section'>
                 <div className='api-box'>
                     <div>
-                        <H2text id='api-title'>api</H2text>
+                        <ContentTilte id='api-title'>api</ContentTilte>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatem, architecto perferendis a doloribus modi quaerat quos voluptate quae ducimus repudiandae! Nemo beatae minus</p>
                     </div>
                 </div>

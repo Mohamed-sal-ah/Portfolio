@@ -4,18 +4,14 @@ import img1 from './images/aboutImg.jpg';
 import './style/about.scss'
 
 
-
-
 const AboutTitle = styled.h3`
 font-size:${props => props.FontSize};
 font-family:'Montserrat', sans-serif;
 text-transform:uppercase;
-
 `;
 const DivContent = styled.div`
    width:50%;
-   padding:0 2rem;
-   
+   padding:0 2rem;  
    text-align:center;
     @media (max-width:800px){
      width:100%;
@@ -30,8 +26,10 @@ width:100%;
 `;
 
 const PaddingDiv = styled.div`
+text-align: center;
+padding:${props => props.Padding};
 @media (max-width:800px){
-padding:0;   
+padding:${props => props.MobilePadding};  
 }
 `;
 const IconDiv = styled.div`
@@ -61,15 +59,14 @@ const About = () => {
     return ( 
         <main>
 
-            <section className='about-section'>
-                
+            <section className='about-section'>              
                 <DivContent>
-                    <PaddingDiv>
+                    <PaddingDiv Padding='0' MobilePadding='0'>
                         <ImgStyle src={img1} alt='about me'></ImgStyle>
                     </PaddingDiv>       
                 </DivContent> 
                 <DivContent>
-                    <PaddingDiv id='center-text'>
+                    <PaddingDiv Padding='25% 0' MobilePadding='0' id='center-text'>
                         <AboutTitle FontSize='2rem' id='title-page'>About me</AboutTitle>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quis nihil laborum. Aut quia, laborum repudiandae molestiae delectus placeat ullam cumque sequi quisquam repellendus culpa autem dignissimos perferendis alias a!</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates rem, libero officiis voluptas accusantium, atque ullam quia obcaecati numquam nisi incidunt, deleniti minus! Autem nemo error accusantium voluptatibus neque illum?</p>
@@ -80,7 +77,7 @@ const About = () => {
             <section className='second-section'>
             
                    <DivWidth>
-                       <PaddingDiv id='skill-text'>
+                       <PaddingDiv Padding='0 1rem' MobilePadding='0 1rem'>
                         <AboutTitle FontSize='1.8rem'>My Skills</AboutTitle>
                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, nam excepturi, esse doloribus reiciendis vel dolorem repellat repellendus.</p>
                        </PaddingDiv> 

@@ -1,10 +1,10 @@
 
 @font-face{
-  src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+  src: url('../fonts/Montserrat-Regular.ttf');
   font-family: Montserrat;
 }
 @font-face{
-  src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+  src: url('../fonts/Ubuntu-Regular.ttf');
   font-family: Ubuntu;
 }
 $dark-theme: false !default;
@@ -31,9 +31,6 @@ $deafult-black:var(--black);
 $light-gray:var(--light-gray);
 $dark-gray:var(--dark-gray);
 $button-color:var(--button-color);
-$light-red:#a03e3e;
-$hover-color:#005a63;
-$boder-color:#012d2d;
 $font-montserrat: Montserrat;
 $font-ubuntu:Ubuntu;
 
@@ -81,27 +78,3 @@ main{
 p{
     font-family: $font-ubuntu;
 }
-
-// -- NAVBAR --------------------------------------------------
-
-
-// -- HOME CONTENT ------------------------------------------
-
- 
-
-// -- ABOUT -- -----------------------------------------------
-
-
-
-//-- APP-page -------------------------------------------------- 
-
-
-
-
-// -- CONTACT --------------------------------------------------
-
-
-
- // -- FOOTER ------------------------------------------------
-
- 

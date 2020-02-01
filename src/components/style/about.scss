@@ -6,6 +6,10 @@
   @include flex-box(row-reverse);
   background-color:$deafult-white;
   border-bottom: 2px solid $dark-gray;
+  @media (max-width:800px){
+    padding-top:0;
+    @include flex-box(column);  
+  }
   }
   
   .second-section{
@@ -14,16 +18,7 @@
     padding-bottom: 3rem;
    
   }
-  #center-text{
-    padding: 25% 0;
-  }
-  .icons-row{
-    height: 50px;
-  }
-  #skill-text{
-        padding: 0 1rem;
-    text-align: center;
-  }
+
   .row-div{
     @include flex-box(column);
    justify-content: space-around;
@@ -47,41 +42,28 @@
   .progress{
     height: 2rem;
     border-radius: 2rem;
-    width: 70%;
+    width: 62%;
   background-color: #8c8c8c;
   }
   
   .pr-bar{
     width: 50%;
     height: 100%;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-radius: 2rem;
   }
   
   @media (max-width:800px){
      #title-page{
-    text-transform: uppercase;
-    margin: 0;
+      padding: 1rem;
+      margin-top: -4px;
     color:$dark-gray;
     border-bottom: 3px solid$dark-gray;
-    padding: 1rem 0;
-    font-size: 2rem;
-  }
-     #center-text{
-         margin-top: -5px;
-         padding: 0;
-     }
+   
+
      #center-text p{
          padding: 0 1rem;
      }
-     .about-section{
-        padding-top:0;
-        @include flex-box(column);  
-     }
-     #skill-text{
-        padding: 0 1rem;
-     }
-  
+
     .div-contact{
         width: 100%;
     }
@@ -100,3 +82,4 @@
       @include flex-box(column);
     }
   }
+}
