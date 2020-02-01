@@ -15,12 +15,10 @@ z-index:-1;
 const WelcomeText = styled.h2`
 font-size:3rem;
 text-align center;
-font-family: 'Montserrat', sans-serif;
+line-height: normal;
 margin 0;
-
 text-transform:uppercase;
 @media (max-width: 800px) {
-
 font-size:2rem;
 }
 `;
@@ -35,14 +33,12 @@ const TransperentDiv = styled.div`
     border-radius:1rem;
     position: absolute;
     transform: translate(-50%, -50%);
-
     padding: 1rem;
     opacity: 0.8;
     @media (max-width: 800px) {
         width:100%;
         padding:1rem 0;
-        border-bottom: 5px solid #333333;
-        
+        border-bottom: 5px solid #333333;     
         top: 0;
         left:0 ;
         transform: translate(0%, 0%);
@@ -62,7 +58,7 @@ font-size: 1.2rem;
     font-size: 1rem;
 }
 `;
-const DivContent = styled.div`
+const ArticleContent = styled.article`
 width: 100%;
 padding: 0 10%;
 display: block;
@@ -99,17 +95,19 @@ class Home extends Component {
                 
                 <StartImg src={image} alt='Taken by Jessica Lewis from Pexels'></StartImg>
                 <TransperentDiv className='div-text'>
-                  <WelcomeText className='wel-text'>Welcome to My Portfolio</WelcomeText>  
+                  <WelcomeText className='welcome-text'>Welcome to My Portfolio</WelcomeText>  
                 </TransperentDiv>
             </WelcomeSection>
             <section className='section-content'>          
-                <DivContent>          
+                <ArticleContent>          
                 <MainText Padding='1rem 1rem'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur cum dolorem ipsum necessitatibus velit placeat vero sequi, et culpa tempore iusto ratione quam, inventore, architecto deserunt laudantium amet accusantium modi?</MainText>   
-                </DivContent>         
+                </ArticleContent>         
             </section>
-            <div className='color-div'>
-                <SubTitle>Projects</SubTitle>
+            <section className='section-link'>
+                <article>
+                          <SubTitle>Projects</SubTitle>
             <MainText Padding='1rem 25%'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ut eveniet eligendi et, tempore tenetur laboriosam.</MainText>
+                </article>  
             <section className='section-img'>
                 <div>
                     <Link className='img-link' to='/applications'>
@@ -126,7 +124,7 @@ class Home extends Component {
                     
                 </div>
             </section>
-            </div>
+            </section>
             
         </main>  );
     }

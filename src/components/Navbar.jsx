@@ -60,7 +60,7 @@ class Navbar extends Component {
         this.toggleNav=this.toggleNav.bind(this)
         this.HeaderIcon=this.HeaderIcon.bind(this)
         this.ToggleTheme=this.ToggleTheme.bind(this)
-        this.ReturnID=this.ReturnID.bind(this)
+        this.ReturnThemeID=this.ReturnThemeID.bind(this)
         this.state={condtion: false, theme:'',loadedTheme:true}
     }
 
@@ -88,11 +88,9 @@ class Navbar extends Component {
             this.setState({theme:'light'});
             document.documentElement.setAttribute('theme','light');
         }
-        
-        
     }
 
-    ReturnID(theme) {
+    ReturnThemeID(theme) {
         if (theme==='dark') {
             return 'dark-theme-icon'
         } else{
@@ -104,7 +102,7 @@ class Navbar extends Component {
              
         const clasCondition = this.state.condtion ? ' open' : ' closed'
         const MobileClass = 'mobileUL'+clasCondition;
-        const ThemeClass = this.ReturnID(this.state.theme)
+        const ThemeClass = this.ReturnThemeID(this.state.theme)
         return (
        
         <React.Fragment>

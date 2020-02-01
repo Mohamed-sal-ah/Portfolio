@@ -1,8 +1,8 @@
 @import './style.scss';
 
-.wel-text{
+.welcome-text{
     color:#ffffff;
-    line-height: normal;
+    font-family: $font-montserrat;
     @media (max-width: 800px) {
       color:$deafult-black;
   }
@@ -18,10 +18,11 @@
      margin-top: -5px;
      border-bottom: 2px solid $dark-gray;
    }
-   .color-div{
+   .section-link{
+    @include flex-box(column);
      background-color:$deafult-white
    }
-   .color-div h3{
+   .section-link h3{
      font-family: $font-montserrat;
    }
    .section-img{
@@ -35,6 +36,13 @@
      justify-content: center;
      padding: 1rem;
      width: 50%;
+     @media (max-width: 800px) {
+      .section-img div{
+        width: 100%;
+        padding: 0 1rem;
+      }
+     }
+
    }
    .section-img div img{
      width: 100%;
@@ -46,29 +54,19 @@
    align-items: center;
        border-radius: 1rem;
        overflow: hidden;
-       background-color:$dark-gray;
+
    }
-   .img-link img{
-    @include transistion-time(0.2s,linear);
+   .img-link{
    &:hover{
-     opacity: 0.5;
+     .link-title{
+      background-color: $dark-gray;
+     }
    }
    }
    
    .link-title{
-    background-color:$dark-gray;
+    background-color:$deafult-black;
     color:$deafult-white;
     font-family: $font-montserrat;
    }
    
-   @media only screen and (max-width: 800px) {
-   main{
-    @include flex-box(column);
-   }
-  
-   .section-img div{
-     width: 100%;
-     padding: 0 1rem;
-   }
-   
-   }

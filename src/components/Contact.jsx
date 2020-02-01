@@ -88,26 +88,3 @@ class Contact extends Component {
 }
 
 export default Contact;
-
-/*
-
-const ContactContent = () => {
-    return ( <main>
-        <section className='contact-section'>
-              <h1 className='contact-title'>Contact</h1>
-               <form className='contact-form'>
-                   <h4 className='header-input'>Email</h4>
-                    <input type='text'/>
-                <h4 className='header-input'>Subject</h4>
-                <input type='text' name='subject'/>
-                <h4 className='header-input'>Message</h4>
-                <textarea type='text' name='message' id='text-area' rows='4' cols='50'>
-                </textarea>
-                <Button1a>Submit</Button1a>
-               </form>
-        </section>
-    </main> );
-}
-
-export default ContactContent;
-*/
