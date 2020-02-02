@@ -75,8 +75,6 @@ class Navbar extends Component {
         }
     }
     componentDidMount(){
-       // document.documentElement.setAttribute('theme','light');
-
         this.setState({theme:'light'})
     }
 
