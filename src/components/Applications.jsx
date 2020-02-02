@@ -30,8 +30,8 @@ font-size: 2.5rem;
 padding-left: 0.5rem;
 `
 
-//www.metaweather.com https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057
-const API = ''
+//www.metaweather.com
+const API = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/906057'
 
 
 class Applications extends Component {
