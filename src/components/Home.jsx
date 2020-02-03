@@ -95,18 +95,18 @@ class Home extends Component {
                 
                 <StartImg src={image} alt='Taken by Jessica Lewis from Pexels'></StartImg>
                 <TransperentDiv className='div-text'>
-                  <WelcomeText className='welcome-text'>Welcome to My Portfolio</WelcomeText>  
+                  <WelcomeText className='welcome-text'>Welcome to My Portfolio </WelcomeText>  
                 </TransperentDiv>
             </WelcomeSection>
             <section className='section-content'>          
                 <ArticleContent>          
-                <MainText Padding='1rem 1rem'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur cum dolorem ipsum necessitatibus velit placeat vero sequi, et culpa tempore iusto ratione quam, inventore, architecto deserunt laudantium amet accusantium modi?</MainText>   
+                <MainText Padding='1rem 1rem'>Hello and welcome to my portfolio the first that I made myself. I used React to develop this site, and I have other web development skills too.</MainText>   
                 </ArticleContent>         
             </section>
             <section className='section-link'>
                 <article>
                           <SubTitle>Projects</SubTitle>
-            <MainText Padding='1rem 25%'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ut eveniet eligendi et, tempore tenetur laboriosam.</MainText>
+            <MainText Padding='1rem 25%'>I have worked on a project to develop this page. Click about me if you want to know more about me and click on project to see the API application.</MainText>
                 </article>  
             <section className='section-img'>
                 <div>
