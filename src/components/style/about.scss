@@ -58,7 +58,7 @@
       margin-top: -4px;
     color:$dark-gray;
     border-bottom: 3px solid$dark-gray;
-   
+     }
 
      #center-text p{
          padding: 0 1rem;
@@ -82,4 +82,3 @@
       @include flex-box(column);
     }
   }
-}
