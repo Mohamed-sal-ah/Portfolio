@@ -14,8 +14,8 @@ height: 30px;
 const Footer = () => {
     return ( <footer>
         <div>
-            <h1>React App</h1>
-               <p>Lorem ipsum dolor sit, amet consectetur</p>
+            <h1>Mohamed s.a</h1>
+               <p>Links to Github and Mail</p>
         </div>
         <div>
 

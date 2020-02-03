@@ -68,8 +68,7 @@ const About = () => {
                 <DivContent>
                     <PaddingDiv Padding='25% 0' MobilePadding='0' id='center-text'>
                         <AboutTitle FontSize='2rem' id='title-page'>About me</AboutTitle>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quis nihil laborum. Aut quia, laborum repudiandae molestiae delectus placeat ullam cumque sequi quisquam repellendus culpa autem dignissimos perferendis alias a!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates rem, libero officiis voluptas accusantium, atque ullam quia obcaecati numquam nisi incidunt, deleniti minus! Autem nemo error accusantium voluptatibus neque illum?</p>
+                <p>I have been interested in programming and also tried other languages and is not so fun as experience as developing website. I have typically worked on an individual and teamwork project and these have evolved my experience with programming.</p>
                     </PaddingDiv>
        
                 </DivContent>      
@@ -79,7 +78,7 @@ const About = () => {
                    <DivWidth>
                        <PaddingDiv Padding='0 1rem' MobilePadding='0 1rem'>
                         <AboutTitle FontSize='1.8rem'>My Skills</AboutTitle>
-                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, nam excepturi, esse doloribus reiciendis vel dolorem repellat repellendus.</p>
+                   <p>I Have good skills on the three languages for web development these are HTML, CSS and JavaScript.</p>
                        </PaddingDiv> 
                       
                         

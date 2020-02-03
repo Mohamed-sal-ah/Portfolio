@@ -78,7 +78,7 @@ class Applications extends Component {
                 <div className='api-box'>
                     <div>
                         <ContentTilte id='api-title'>api</ContentTilte>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatem, architecto perferendis a doloribus modi quaerat quos voluptate quae ducimus repudiandae! Nemo beatae minus</p>
+                        <p>This Api application is the todays weather with temperature and wind speed and direction.</p>
                     </div>
                 </div>
                 <div className='api-box'>
