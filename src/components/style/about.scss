@@ -51,6 +51,9 @@
     height: 100%;
     border-radius: 2rem;
   }
+  h3{
+    color: $deafult-black;
+  }
   
   @media (max-width:800px){
      #title-page{
