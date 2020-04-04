@@ -32,7 +32,7 @@ textarea{
 @extend %inputs;
 margin-bottom: 1rem;
 }
-#contact-form{
+#contact-box{
   @include flex-box(column);
   height: fit-content;
   width: 500px;
@@ -46,21 +46,17 @@ margin-bottom: 1rem;
   font-family: $font-montserrat;
 }
 
-button{
+.contact-links{
   font-family: $font-montserrat;
-  color: $deafult-white;
-  background-color:$button-color;
-  padding: 0.5rem;
-
- font-size: 1.2rem;
-  text-transform: uppercase;
-  width: fit-content; 
-  cursor: pointer;
+  color:$deafult-black;
   &:hover{
-    padding: 0.4rem;
-    border: 0.1rem solid $dark-gray;
-    color:$deafult-black;
-    background-color: $light-gray;
+     color:$deafult-black;
   }
 }
+
+.contact-div{
+  @include flex-box(row);
+  padding: 2rem;
+}
+
 

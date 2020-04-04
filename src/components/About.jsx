@@ -68,7 +68,7 @@ const About = () => {
                 <DivContent>
                     <PaddingDiv Padding='25% 0' MobilePadding='0' id='center-text'>
                         <AboutTitle FontSize='2rem' id='title-page'>About me</AboutTitle>
-                <p>I have been interested in programming and also tried other languages and is not so fun as experience as developing website. I have typically worked on an individual and teamwork project and these have evolved my experience with programming.</p>
+                <p> Hello my name is Mohamed Salah Ahmed and i have been interested in programming and also tried other languages and is not so fun as experience as developing website. I have typically worked on an individual and teamwork project and these have evolved my experience with programming.</p>
                     </PaddingDiv>
        
                 </DivContent>      

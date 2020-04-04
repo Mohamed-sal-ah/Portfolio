@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import './style/contact.scss'
-
+import gitIcon from './icons/github-logo.svg';
+import mailIcon from './icons/mail.svg';
 
 
 const ContactSection = styled.section`
-padding: 5rem 0;
+padding: 5rem 0 50vh 0;
 height: fit-content;
 justify-content: center;
 align-items: center;
@@ -25,7 +26,7 @@ margin: 0;
 }
 `;
 
-const ContactForm = styled.form`
+const ContactBox = styled.div`
 height: fit-content;
 width: 500px;
 @media (max-width: 800px) {
@@ -35,21 +36,25 @@ width: 500px;
 `;
 const HeaderInput = styled.h4`
 text-align: left;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+
   margin: 0;
   font-size: 1.2rem;
 `;
 
-const Button = styled.button`
-padding: 0.5rem;
-font-size: 1.2rem;
- text-transform: uppercase;
- outline: none;
- border:none;
- width: fit-content;
+const Icons = styled.img`
+width: 30px;
+padding: 0;
+margin: 0;
+height: 30px;
 `
 
+const ContactLinks = styled.a`
+text-decoration:none;
+padding-left:2rem;
+@media (max-width: 800px) {
+  padding-left:2rem; 
+}
+`
 
 class Contact extends Component {
     constructor(props) {
@@ -72,16 +77,16 @@ class Contact extends Component {
         return (<main>
             <ContactSection className='contact-section'>
                 <ContactTitle id='contact-title'>Contact</ContactTitle>
-                <ContactForm id='contact-form'>
-                    <HeaderInput className='header-input'>Email</HeaderInput>
-                    <input onChange={this.onChange} type='text' name="email" />
-                    <HeaderInput className='header-input'>Subject</HeaderInput>
-                    <input onChange={this.onChange} type='text' name='subject' />
-                    <HeaderInput className='header-input'>Message</HeaderInput>
-                    <textarea value={this.state.message} onChange={this.onChange} type='text' name='message' id='text-area' rows='4' cols='50'>
-                    </textarea>
-                    <Button type='submit' onClick={this.Submit}>Submit</Button>    
-                </ContactForm>
+                <ContactBox id='contact-box'>
+                    <div className='contact-div'>
+                        <Icons className='icons' src={gitIcon} alt='github icon'/> 
+                        <ContactLinks className='contact-links' href='https://github.com/Mohamed-sal-ah'><HeaderInput>https://github.com/Mohamed-sal-ah</HeaderInput></ContactLinks>
+                    </div>
+                    <div className='contact-div'>
+                   <Icons className='icons' src={mailIcon} alt='mail icon' />
+                  <ContactLinks className='contact-links' href='mailto:mohamedsalahahmed@outlook.com'><HeaderInput>mohamedsalahahmed@outlook.com</HeaderInput></ContactLinks>
+                    </div>
+                </ContactBox>
             </ContactSection>
         </main>);
     }
