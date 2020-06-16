@@ -1,0 +1,17 @@
+@font-face{
+  src: url('./Font/Montserrat-Regular.ttf');
+  font-family: Montserrat;
+}
+:root {
+   --theme:#ffffff;
+}
+[theme='dark']{
+--theme:#000000;
+}
+$themeColor : var(--theme);
+
+body{
+    font-family: Montserrat;
+    background-color: $themeColor;
+    margin :0;
+}
