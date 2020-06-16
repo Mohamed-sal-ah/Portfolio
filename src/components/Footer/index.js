@@ -21,8 +21,8 @@ const Footer = ({ pageTheme }) => {
             <STYLED.FooterStyle>
                 <STYLED.Infotext>@2020 by Mohamed-sal-ah</STYLED.Infotext>
                 <STYLED.LinkRow>
-                    <a href='https://github.com/Mohamed-sal-ah'><STYLED.StyledMail /></a>
-                    <a href='mailto:mohamedsalahahmed@outlook.com'><STYLED.StyledGitHub /></a>
+                    <a href='mailto:mohamedsalahahmed@outlook.com'><STYLED.StyledMail /></a>
+                    <a href='https://github.com/Mohamed-sal-ah'><STYLED.StyledGitHub /></a>
                 </STYLED.LinkRow>
             </STYLED.FooterStyle>
         </ThemeProvider>
