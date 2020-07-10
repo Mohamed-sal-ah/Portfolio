@@ -31,9 +31,10 @@ color:${props => props.theme.fontColor};
 export const ContactTitle = styled.h1`
 margin :0;
 font-size:40px;
-font-family : 'Montserrat';
+color : ${props => props.theme.titleColor};
+font-family : 'Roboto';
 text-align:center;
-font-weight: 500;
+font-weight: 100;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
@@ -42,36 +43,38 @@ text-transform: uppercase;
 
 export const ContactText = styled.p`
 margin:0;
-font-size:20px;
+font-size:17px;
 text-align:center;
-padding:20px;
-font-family : 'Verdana';
-@media (max-width: 750px) { 
-    font-size:15px;
-    padding:15px 5px;
-}
+padding-bottom:20px;
+font-family : 'Roboto';
+
 `
 
 export const ContactLinkDiv = styled.div`
-padding:5px;
-border:3px solid ${props => props.theme.borderColor};
-border-radius:5px;
+padding:0px;
     display: flex;
+    font-family : 'Roboto';
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 10px 0;
+    margin:0;
     @media (max-width: 750px) { 
         padding:0;
-        justify-content:space-around;
+        justify-content:space-evenly;
     }
 
     @media (max-width: 350px) {
     border-radius:0;
     border-right:none;
     border-left:none;
-    justify-content:space-between;
+    justify-content:space-evenly;
     }
+`
+export const ContactSpan = styled.span`
+padding:15px;
+@media (max-width: 750px) { 
+    padding:10px 5px;
+}
 `
 
 export const ContactLink = styled.a`

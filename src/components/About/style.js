@@ -40,10 +40,11 @@ color: ${props => props.theme.fontColor};
 export const ArticleTitle = styled.h1`
 margin :0;
 font-size:40px;
-font-family : 'Montserrat';
+font-family : 'Roboto';
+color : ${props => props.theme.titleColor};
 padding-bottom: 20px;
 text-align:center;
-font-weight: 500;
+font-weight: 100;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
@@ -53,10 +54,10 @@ text-transform: uppercase;
 
 export const ArticleText = styled.p`
 margin:0;
-font-size:20px;
+font-size:17px;
 text-align:center;
 padding:0 20px;
-font-family : 'Verdana';
+font-family : 'Roboto';
 @media (max-width: 750px) { 
     font-size:15px;
 }

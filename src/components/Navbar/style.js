@@ -15,15 +15,18 @@ justify-content: space-between;
 align-items:center;
 transition: 0.2s ease;
 background-color: ${props => props.theme.backgroundColor};
-border-bottom: 3px solid ${props => props.theme.borderColor};
 width:100%;
 `
 
 export const TitleLink = styled(NavLink)`
 font-family : 'Montserrat';
-font-size :45px;
+font-size :35px;
+text-transform: uppercase;
+font-weight:100;
 text-decoration : none;
 color: ${props => props.theme.mainColor};
+padding:5px;
+margin: 10px;
 @media (max-width: 750px) { 
   font-size:23px;
 }
@@ -69,17 +72,18 @@ padding:13px;
 `
 
 export const LinkItem = styled(NavLink)`
-font-family: 'Verdana';
+font-family: 'Roboto';
 cursor:pointer;
+font-weight:100;
 text-decoration:none;
  transition: 0.2s ease;
 color: ${props => props.theme.mainColor};
-font-size:25px;
+font-size:20px;
 padding-left:2px;
 padding-right:2px;
 padding-bottom: 3px;
  &.active-link {
-    border-bottom:2px solid  ${props => props.theme.mainColor};
+    border-bottom:2px solid #8E3B46;
   }
 `
 export const BarItems = styled.div`
@@ -87,7 +91,7 @@ export const BarItems = styled.div`
   flex-direction:column;
   &.clicked > {
   :nth-child(1){
-  transform: translateY(11px) rotate(-45deg);
+  transform: translateY(9px) rotate(-45deg);
 }
 &:nth-child(2){
  opacity: 0;
@@ -101,12 +105,12 @@ export const BarItems = styled.div`
 
 
 export const Bar = styled.span`
-background-color: ${props => props.theme.mainColor};
+background-color: ${props => props.theme.barColor};
 display: block;
 margin: 3px 0;
 border-radius: 5px;
 cursor:pointer;
-height: 4px;
+height: 3px;
 width: 35px;
 transition:0.5s ease;
 &.clicked:nth-child(1){
@@ -144,8 +148,7 @@ font-size:30px;
 padding:10px 0;
 transition: 0.1s;
 display:block;
-font-family:'Verdana';
-    border-bottom: 2px solid ${props => props.theme.mainColor};
+font-family:'Roboto';
     width: 100%;
     text-align: center;
 `

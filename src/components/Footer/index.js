@@ -6,11 +6,11 @@ const Footer = ({ pageTheme }) => {
     let backgroundValue;
     let fontValue;
     if (pageTheme === 'dark') {
-        backgroundValue = '252525'
-        fontValue = 'C3C0C0'
+        backgroundValue = '000000'
+        fontValue = 'CDCDCB'
     } else {
-        backgroundValue = 'F0F0F0'
-        fontValue = '3E3E3E'
+        backgroundValue = 'FFFFFF'
+        fontValue = '868683'
     }
     const theme = {
         backgroundColor: `#${backgroundValue}`,
@@ -20,10 +20,6 @@ const Footer = ({ pageTheme }) => {
         <ThemeProvider theme={theme}>
             <STYLED.FooterStyle>
                 <STYLED.Infotext>@2020 by Mohamed-sal-ah</STYLED.Infotext>
-                <STYLED.LinkRow>
-                    <a href='mailto:mohamedsalahahmed@outlook.com'><STYLED.StyledMail /></a>
-                    <a href='https://github.com/Mohamed-sal-ah'><STYLED.StyledGitHub /></a>
-                </STYLED.LinkRow>
             </STYLED.FooterStyle>
         </ThemeProvider>
 

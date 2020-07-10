@@ -23,21 +23,21 @@ class NavBar extends Component {
         const clicked = this.state.mobileNav ? 'clicked' : '';
         let mainColorValue;
         let backgroundColorValue;
-        let borderColorValue;
+        let barColorValue;
         if (this.props.pageTheme === 'dark') {
             mainColorValue = 'ffffff';
-            backgroundColorValue = '2d2d2d';
-            borderColorValue = 'D9D9D9';
+            backgroundColorValue = '1a1a1a';
+            barColorValue = 'CDCDCB';
         } else {
             mainColorValue = '000000';
-            backgroundColorValue = 'ffffff';
-            borderColorValue = '333333'
+            backgroundColorValue = 'f2f2f2';
+            barColorValue = '707070'
         }
         const theme = {
             mainColor: `#${mainColorValue}`,
             backgroundColor: `#${backgroundColorValue}`,
-            borderColor: `#${borderColorValue}`,
-            toggle: `${percentVaule}%`
+            barColor: `#${barColorValue}`,
+            toggle: `${percentVaule}%`,
         };
 
         return (

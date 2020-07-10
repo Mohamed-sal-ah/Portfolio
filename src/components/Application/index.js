@@ -30,20 +30,28 @@ class ApplicationPage extends Component {
             </div>;
         }
         else {
-            weatherData = <div><p>Loading...</p></div>
+            weatherData = <div><STYLED.ArticleText>Loading...</STYLED.ArticleText></div>
         }
         let font;
         let color;
+        let title;
+        let shadow;
         if (this.props.pageTheme === 'dark') {
-            font = 'ffffff'
-            color = '1b1b1b'
+            font = 'CDCDCB'
+            title = 'ffffff'
+            color = '000000'
+            shadow = '6C6C6C'
         } else {
-            font = '000000'
-            color = 'ffffff'
+            font = '6C6C6C'
+            title = '000000'
+            color = 'FFFFFF'
+            shadow = 'CDCDCB'
         }
         const theme = {
             fontColor: `#${font}`,
             backGround: `#${color}`,
+            titleColor: `#${title}`,
+            shadowColor : `#${shadow}`
         }
         return (
             <>
@@ -59,8 +67,10 @@ class ApplicationPage extends Component {
                             </STYLED.ArticleText>
                             </STYLED.ArticleBox>
                             <STYLED.ArticleBox>
-                                <STYLED.WeatherTitle>Todays Weather Project</STYLED.WeatherTitle>
+                                <STYLED.BoxShadowDiv>
+                                <STYLED.WeatherTitle>Weather API</STYLED.WeatherTitle>
                                 {weatherData}
+                                </STYLED.BoxShadowDiv>
                             </STYLED.ArticleBox>
                         </STYLED.FlexBox>
                     </STYLED.FullPage>

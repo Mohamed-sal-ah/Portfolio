@@ -5,19 +5,22 @@ import AboutImage from '../../images/ben-kolde-bs2Ba7t69mM-unsplash.jpg'
 import NavBar from '../Navbar'
 
 const AboutPage = ({ pageTheme, onForward }) => {
+    let title;
     let font;
     let color;
     if (pageTheme === 'dark') {
-        font = 'ffffff'
-        color = '1b1b1b'
+        font = 'CDCDCB'
+        title = 'ffffff'
+        color = '000000'
     } else {
-        font = '000000'
-        color = 'ffffff'
+        font = '6C6C6C'
+        title = '000000'
+        color = 'FFFFFF'
     }
     const theme = {
         fontColor: `#${font}`,
         backGround: `#${color}`,
-
+        titleColor : `#${title}`
     }
     return (
         <>
