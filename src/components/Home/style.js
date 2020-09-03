@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 export const FullPage = styled.div`
 width: 100vw;
 height :100vh;
-padding-top:30vw;
 background: ${props => props.theme.backGround};
  transition: 0.2s ease;
 display:flex;
