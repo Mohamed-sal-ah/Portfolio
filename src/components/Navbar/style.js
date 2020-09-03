@@ -37,11 +37,13 @@ margin: 10px;
 export const AdjustThemeLight = styled(Sun)`
 color : #FFFFFF;
 height:30px;
+cursor:pointer;
 `
 
 export const AdjustThemeDark = styled(Moon)`
 color : #FFFFFF;
 height:30px;
+cursor:pointer;
 `
 
 export const ULNav = styled.ul`
