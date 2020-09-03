@@ -37,13 +37,13 @@ class ApplicationPage extends Component {
         let title;
         let shadow;
         if (this.props.pageTheme === 'dark') {
-            font = 'CDCDCB'
-            title = 'ffffff'
+            font = 'ffffff'
+            title = '6892C5'
             color = '000000'
             shadow = '6C6C6C'
         } else {
-            font = '6C6C6C'
-            title = '000000'
+            font = '000000'
+            title = '104687'
             color = 'FFFFFF'
             shadow = 'CDCDCB'
         }
@@ -51,7 +51,7 @@ class ApplicationPage extends Component {
             fontColor: `#${font}`,
             backGround: `#${color}`,
             titleColor: `#${title}`,
-            shadowColor : `#${shadow}`
+            shadowColor: `#${shadow}`
         }
         return (
             <>
@@ -68,8 +68,8 @@ class ApplicationPage extends Component {
                             </STYLED.ArticleBox>
                             <STYLED.ArticleBox>
                                 <STYLED.BoxShadowDiv>
-                                <STYLED.WeatherTitle>Weather API</STYLED.WeatherTitle>
-                                {weatherData}
+                                    <STYLED.WeatherTitle>Weather API</STYLED.WeatherTitle>
+                                    {weatherData}
                                 </STYLED.BoxShadowDiv>
                             </STYLED.ArticleBox>
                         </STYLED.FlexBox>

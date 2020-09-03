@@ -39,12 +39,12 @@ color: ${props => props.theme.fontColor};
 
 export const ArticleTitle = styled.h1`
 margin :0;
-font-size:40px;
+font-size:50px;
 font-family : 'Roboto';
 color : ${props => props.theme.titleColor};
-padding-bottom: 20px;
+padding-bottom: 10px;
 text-align:center;
-font-weight: 100;
+font-weight: 400;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
@@ -54,15 +54,13 @@ text-transform: uppercase;
 
 export const ArticleText = styled.p`
 margin:0;
-font-size:17px;
+font-size:15px;
 text-align:center;
 padding:0 20px;
 font-family : 'Roboto';
-@media (max-width: 750px) { 
-    font-size:15px;
-}
 `
 
 export const Image = styled.img`
 height:60vh;
+border-radius:9px;
 `

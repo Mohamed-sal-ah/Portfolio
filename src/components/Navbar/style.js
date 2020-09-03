@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Adjust } from '@styled-icons/zondicons/Adjust'
 import { NavLink } from 'react-router-dom'
-
+import { Moon } from '@styled-icons/feather/Moon'
+import { Sun } from '@styled-icons/feather/Sun'
 
 export const FullNav = styled.div`
 width:100%;
@@ -14,7 +14,7 @@ flex-direction: row;
 justify-content: space-between;
 align-items:center;
 transition: 0.2s ease;
-background-color: ${props => props.theme.backgroundColor};
+background-color: #082245;
 width:100%;
 `
 
@@ -24,18 +24,24 @@ font-size :35px;
 text-transform: uppercase;
 font-weight:100;
 text-decoration : none;
-color: ${props => props.theme.mainColor};
+color: #FFFFFF;
 padding:5px;
 margin: 10px;
 @media (max-width: 750px) { 
   font-size:23px;
 }
+@media (max-width : 375px) {
+  font-size:17px
+}
 `
-export const AdjustTheme = styled(Adjust)`
-color : ${props => props.theme.mainColor};
+export const AdjustThemeLight = styled(Sun)`
+color : #FFFFFF;
 height:30px;
- transition: 0.2s ease;
+`
 
+export const AdjustThemeDark = styled(Moon)`
+color : #FFFFFF;
+height:30px;
 `
 
 export const ULNav = styled.ul`
@@ -77,13 +83,21 @@ cursor:pointer;
 font-weight:100;
 text-decoration:none;
  transition: 0.2s ease;
-color: ${props => props.theme.mainColor};
+color: #FFFFFF;
 font-size:20px;
 padding-left:2px;
 padding-right:2px;
 padding-bottom: 3px;
+transition:none;
  &.active-link {
-    border-bottom:2px solid #8E3B46;
+    border-bottom:2px solid #C15261;
+  }
+  &.active-link:hover {
+    border-bottom:2px solid #C15261;
+  }
+
+  &:hover {
+    border-bottom:2px solid #619E9E;
   }
 `
 export const BarItems = styled.div`
@@ -105,7 +119,7 @@ export const BarItems = styled.div`
 
 
 export const Bar = styled.span`
-background-color: ${props => props.theme.barColor};
+background-color: #ffffff;
 display: block;
 margin: 3px 0;
 border-radius: 5px;
@@ -134,7 +148,7 @@ display:none;
     width: 100%;
      transition: 0.5s;
     height: ${props => props.theme.toggle};
-  background-color: ${props => props.theme.backgroundColor};
+  background-color: #0b2e5b;
 }
 `
 export const MobileUL = styled(ULNav)`

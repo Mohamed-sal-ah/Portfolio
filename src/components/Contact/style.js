@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Github } from '@styled-icons/boxicons-logos/Github'
 import { Mail } from '@styled-icons/heroicons-outline/Mail'
 
 export const FullPage = styled.div`
@@ -14,10 +13,32 @@ align-items:center;
     padding: 80px 0;
 }
 `
+export const FlexBox = styled.section`
+display:flex;
+flex-direction:row;
+justify-content:center;
+@media (max-width: 750px) { 
+    flex-direction:column-reverse;
+}
+`
+export const TwoSidersBox = styled.div`
+justify-content:center;
+align-items:center;
+display:flex;
+width:50%;
+@media (max-width: 750px) { 
+    width: 100%;
+    padding:30px 0;
+}
+`
+
 
 export const ContactDiv = styled.div`
 width:500px;
+display:flex;
 height:fit-content;
+align-items:center;
+flex-direction:column;
 color:${props => props.theme.fontColor};
 @media (max-width: 750px) {
     width:95vw;
@@ -29,26 +50,19 @@ color:${props => props.theme.fontColor};
 
 `
 export const ContactTitle = styled.h1`
+padding-bottom: 10px;
 margin :0;
-font-size:40px;
+font-size:50px;
 color : ${props => props.theme.titleColor};
 font-family : 'Roboto';
 text-align:center;
-font-weight: 100;
+font-weight: 400;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
 }
 `
 
-export const ContactText = styled.p`
-margin:0;
-font-size:17px;
-text-align:center;
-padding-bottom:20px;
-font-family : 'Roboto';
-
-`
 
 export const ContactLinkDiv = styled.div`
 padding:0px;
@@ -70,29 +84,44 @@ padding:0px;
     justify-content:space-evenly;
     }
 `
-export const ContactSpan = styled.span`
-padding:15px;
+export const EmailCirlce = styled.span`
+padding:10px;
+background-color: #C15261;
+border-radius:50%;
+`
+
+export const LinkTitle = styled.h3`
+color: #C15261;
+font-size:25px;
+font-family : 'Roboto';
+letter-spacing:2px;
+text-align:center;
+text-transform:uppercase;
+margin: 10px 0;
 @media (max-width: 750px) { 
-    padding:10px 5px;
+    font-size:20px;
 }
 `
 
 export const ContactLink = styled.a`
 text-decoration:none;
-color: ${props => props.theme.fontColor};
-`
-
-export const StyledGitHub = styled(Github)`
-color: ${props => props.theme.frontColor};
- transition: 0.2s ease;
-
-height:40px;
-width:40px;
+font-family : 'Roboto';
+font-size:17px;
+letter-spacing: 1px;
+color: ${props => props.theme.linkColor};
+@media (max-width: 750px) { 
+    font-size:15px;
+}
 `
 
 export const StyledMail = styled(Mail)`
-color: ${props => props.theme.frontColor};
+color: #FFFFFF;
 transition: 0.2s ease;
-height:40px;
-width:40px;
+height:50px;
+width:50px;
+`
+
+export const Image = styled.img`
+width:90%;
+border-radius:9px;
 `

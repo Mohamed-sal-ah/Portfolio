@@ -9,18 +9,18 @@ const AboutPage = ({ pageTheme, onForward }) => {
     let font;
     let color;
     if (pageTheme === 'dark') {
-        font = 'CDCDCB'
-        title = 'ffffff'
+        font = 'ffffff'
+        title = '6892C5'
         color = '000000'
     } else {
-        font = '6C6C6C'
-        title = '000000'
+        font = '000000'
+        title = '104687'
         color = 'FFFFFF'
     }
     const theme = {
         fontColor: `#${font}`,
         backGround: `#${color}`,
-        titleColor : `#${title}`
+        titleColor: `#${title}`
     }
     return (
         <>

@@ -1,28 +1,23 @@
 import React from 'react'
 import * as STYLED from './style'
-import { ThemeProvider } from 'styled-components'
 
 const Footer = ({ pageTheme }) => {
-    let backgroundValue;
-    let fontValue;
-    if (pageTheme === 'dark') {
-        backgroundValue = '000000'
-        fontValue = 'CDCDCB'
-    } else {
-        backgroundValue = 'FFFFFF'
-        fontValue = '868683'
-    }
-    const theme = {
-        backgroundColor: `#${backgroundValue}`,
-        frontColor: `#${fontValue}`
-    }
     return (
-        <ThemeProvider theme={theme}>
-            <STYLED.FooterStyle>
-                <STYLED.Infotext>@2020 by Mohamed-sal-ah</STYLED.Infotext>
-            </STYLED.FooterStyle>
-        </ThemeProvider>
-
+        <STYLED.FooterStyle>
+            <STYLED.Infotext>@2020 by Mohamed-sal-ah</STYLED.Infotext>
+            <STYLED.DivIcons>
+                <STYLED.IconSpan>
+                    <a href='https://github.com/Mohamed-sal-ah'>
+                        <STYLED.GithubIcon />
+                    </a>
+                </STYLED.IconSpan>
+                <STYLED.IconSpan>
+                    <a href='mailto:mohamedsalahahmed@outlook.com'>
+                        <STYLED.MailIcon />
+                    </a>
+                </STYLED.IconSpan>
+            </STYLED.DivIcons>
+        </STYLED.FooterStyle>
     )
 }
 

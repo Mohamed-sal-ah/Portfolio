@@ -35,12 +35,12 @@ flex-direction:column;
 
 export const ArticleTitle = styled.h1`
 margin :0;
-font-size:40px;
+font-size:50px;
 font-family : 'Roboto';
 color : ${props => props.theme.titleColor};
-padding-bottom: 20px;
+padding-bottom: 10px;
 text-align:center;
-font-weight: 100;
+font-weight: 400;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
@@ -49,13 +49,10 @@ text-transform: uppercase;
 
 export const ArticleText = styled.p`
 margin:0;
-font-size:17px;
+font-size:15px;
 text-align:center;
 padding:0 20px;
 font-family : 'Roboto';
-@media (max-width: 750px) { 
-    font-size:15px;
-}
 `
 
 export const BoxShadowDiv = styled.div`
@@ -65,8 +62,9 @@ box-shadow: 0px 0px 10px ${props => props.theme.shadowColor};
 display: flex;
 flex-direction: column;
 justify-content: center;
-border-radius: 20px;
-@media (max-width: 750px) { 
+border-radius: 9px;
+@media (max-width: 750px) {
+        box-shadow: 0px 15px 10px  ${props => props.theme.shadowColor}; 
     width: 100%;
     border-radius:0;
 }
@@ -82,6 +80,7 @@ width: 5rem;
 `
 
 export const WeatherTitle = styled(ArticleTitle)`
+color : ${props => props.theme.fontColor};
 font-size: 30px;
 @media (max-width: 750px) { 
     font-size:25px;
@@ -101,7 +100,7 @@ export const WeatherText = styled.p`
 font-size: 60px;
 padding-left: 15px;
 font-family:'Roboto';
-color : ${props => props.theme.titleColor};
+color : ${props => props.theme.fontColor};
 margin:0;
 @media (max-width: 750px) { 
     font-size:30px;
@@ -111,7 +110,7 @@ export const WeatherData = styled.p`
 margin: 10px 0;
 font-family:'Roboto';
 padding : 0 40px;
-color : ${props => props.theme.titleColor};
+color : ${props => props.theme.fontColor};
 font-size:17px;
 @media (max-width: 750px) { 
     font-size:15px;

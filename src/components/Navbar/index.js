@@ -21,22 +21,13 @@ class NavBar extends Component {
     render() {
         const percentVaule = this.state.mobileNav ? '100' : '0';
         const clicked = this.state.mobileNav ? 'clicked' : '';
-        let mainColorValue;
-        let backgroundColorValue;
-        let barColorValue;
+        let themeIcon;
         if (this.props.pageTheme === 'dark') {
-            mainColorValue = 'ffffff';
-            backgroundColorValue = '1a1a1a';
-            barColorValue = 'CDCDCB';
+            themeIcon = <STYLED.AdjustThemeDark onClick={this.props.changeTheme} />
         } else {
-            mainColorValue = '000000';
-            backgroundColorValue = 'f2f2f2';
-            barColorValue = '707070'
+            themeIcon = <STYLED.AdjustThemeLight onClick={this.props.changeTheme} />
         }
         const theme = {
-            mainColor: `#${mainColorValue}`,
-            backgroundColor: `#${backgroundColorValue}`,
-            barColor: `#${barColorValue}`,
             toggle: `${percentVaule}%`,
         };
 
@@ -57,7 +48,7 @@ class NavBar extends Component {
                                 <STYLED.LinkItem activeClassName='active-link' to='/contact'>Contact</STYLED.LinkItem>
                             </STYLED.TopListItem>
                             <STYLED.TopListItem>
-                                <STYLED.AdjustTheme onClick={this.props.changeTheme} />
+                                {themeIcon}
                             </STYLED.TopListItem>
                             <STYLED.TopListItem>
                                 <STYLED.BarItems className={clicked} onClick={this.ToggleMobileNav}>

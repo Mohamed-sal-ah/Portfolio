@@ -40,7 +40,7 @@ class App extends Component {
           <Route path='/about' component={() => (<AboutPage pageTheme={this.state.theme} onForward={this.ThemeOnClick} />)} />
           <Route path='/contact' component={() => (<ContactPage pageTheme={this.state.theme} onForward={this.ThemeOnClick} />)} />
           <Route path='/projects' component={() => (<ApplicationPage weatherdata={this.state.weatherdata} pageTheme={this.state.theme} onForward={this.ThemeOnClick} />)} />
-          <Footer pageTheme={this.state.theme} />
+          <Footer />
         </Router>
       </>
     )

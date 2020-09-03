@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export const FullPage = styled.div`
 width: 100vw;
 height :100vh;
+padding-top:30vw;
 background: ${props => props.theme.backGround};
  transition: 0.2s ease;
 display:flex;
@@ -49,13 +50,13 @@ align-self:center;
 `
 
 export const Title = styled.h1`
-font-size:60px;
+font-size:70px;
 padding:0 20px;
 color:${props => props.theme.titleColor};
-    font-weight: 300;
+font-weight: 400;
 margin:0;
 @media (max-width: 750px) { 
-  font-size:50px;  
+  font-size:60px;  
 }
 `
 
@@ -71,14 +72,16 @@ margin:0;
 
 export const ButtonLink = styled(Link)`
 font-family: 'Montserrat';
-background-color:#4E7E7E;
+background-color:#1D4F4F;
 padding:10px 20px;
+font-weight:800;
 color:#ffffff;
 font-size: 15px;
-margin: 15px 20px;
+margin: 20px;
 text-transform:uppercase;
 text-decoration:none;
 width:fit-content;
+border-radius: 3px;
 `
 
 export const Image = styled.img`
