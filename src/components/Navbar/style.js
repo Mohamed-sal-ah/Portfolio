@@ -103,6 +103,7 @@ transition:none;
   }
 `
 export const BarItems = styled.div`
+cursor:pointer;
   display:flex;
   flex-direction:column;
   &.clicked > {
@@ -125,7 +126,6 @@ background-color: #ffffff;
 display: block;
 margin: 3px 0;
 border-radius: 5px;
-cursor:pointer;
 height: 3px;
 width: 35px;
 transition:0.5s ease;
