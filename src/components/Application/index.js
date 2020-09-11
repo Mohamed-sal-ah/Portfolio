@@ -61,9 +61,8 @@ class ApplicationPage extends Component {
                         <STYLED.FlexBox>
                             <STYLED.ArticleBox>
                                 <STYLED.ArticleTitle>Projects</STYLED.ArticleTitle>
-                                <STYLED.ArticleText>I have worked on a project to develop this page.
-                                Click about me if you want to know more about me and click on project to see the API weather application.
-                                I have developed todays weather in Stockholm from metaweather API.
+                                <STYLED.ArticleText>
+                                    I have worked on a project to develop this Portfolio site. In right side of this page is the current weather in Stockholm using Metaweather API.
                             </STYLED.ArticleText>
                             </STYLED.ArticleBox>
                             <STYLED.ArticleBox>
