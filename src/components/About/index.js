@@ -33,7 +33,7 @@ const AboutPage = ({ pageTheme, onForward }) => {
                                 About me
                         </STYLED.ArticleTitle>
                             <STYLED.ArticleText>
-                                Hello, my name is Mohamed Salah Ahmed I'm a Front-end developer student and I have a interest in web development. I during the course of the education i have learned HTML/CSS and JS also I created this website using React. I have typically worked on individual and teamwork project and these have evolved my experience with programming. What I am looking forward now is to learn new languages in web development and integrate them in my private projects.
+                                Hi my name is Mohamed Salah Ahmed I'm a Front-end developer student and I have an interest in web development. I during the course of the education i have learned HTML/CSS and JS also I created this website using React. I have typically worked on individual and teamwork project and these have evolved my experience with programming. What I am looking forward now is to learn new languages in web development and integrate them in my private projects.
                             </STYLED.ArticleText>
                         </STYLED.ArticleBox>
                         <STYLED.TwoSidersBox>
