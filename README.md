@@ -2,6 +2,10 @@
 
 This is a Project that i have been working on my personal protfolio [Mohamed-sal-ah](http://mohamed-sal-ah.surge.sh/).
 
+## Description
+This protfolio was build by using React.
+
+
 ## Installation
 
 To install the app use yarn install
