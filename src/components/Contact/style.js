@@ -1,16 +1,27 @@
 import styled from 'styled-components'
 import { Mail } from '@styled-icons/heroicons-outline/Mail'
 
-export const FullPage = styled.div`
-width: 100vw;
-height :100vh;
-background-color: ${props => props.theme.backGround};
+export const AllPageMain = styled.div`
 display:flex;
- transition: 0.2s ease;
+flex-direction:column;
+justify-content:space-between;
+height:100vh;
+position: absolute;
+left: 0;
+right: 0;
+background-color: #FFFCFB;
+`
+
+export const FullPage = styled.main`
+width: 100vw;
+height:100%;
+background-color:#FFFFFF;
+display:flex;
+transition: 0.2s ease;
 justify-content :center;
 align-items:center;
 @media (max-width: 750px) {
-    padding: 80px 0;
+    margin-top: 7vh;
 }
 `
 export const FlexBox = styled.section`
@@ -39,7 +50,7 @@ display:flex;
 height:fit-content;
 align-items:center;
 flex-direction:column;
-color:${props => props.theme.fontColor};
+color:#000000;
 @media (max-width: 750px) {
     width:95vw;
 }
@@ -53,10 +64,9 @@ export const ContactTitle = styled.h1`
 padding-bottom: 10px;
 margin :0;
 font-size:50px;
-color : ${props => props.theme.titleColor};
-font-family : 'Roboto';
+color : #104687;
+font-family : Roboto;
 text-align:center;
-font-weight: 400;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
@@ -66,18 +76,18 @@ text-transform: uppercase;
 
 export const ContactLinkDiv = styled.div`
 padding:0px;
-    display: flex;
-    font-family : 'Roboto';
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin:0;
-    @media (max-width: 750px) { 
-        padding:0;
-        justify-content:space-evenly;
-    }
+display: flex;
+font-family : Roboto;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+margin:0;
+@media (max-width: 750px) { 
+    padding:0;
+    justify-content:space-evenly;
+}
 
-    @media (max-width: 350px) {
+@media (max-width: 350px) {
     border-radius:0;
     border-right:none;
     border-left:none;
@@ -93,7 +103,7 @@ border-radius:50%;
 export const LinkTitle = styled.h3`
 color: #C15261;
 font-size:25px;
-font-family : 'Roboto';
+font-family : Roboto;
 letter-spacing:2px;
 text-align:center;
 text-transform:uppercase;
@@ -105,10 +115,10 @@ margin: 10px 0;
 
 export const ContactLink = styled.a`
 text-decoration:none;
-font-family : 'Roboto';
+font-family : Roboto;
 font-size:17px;
 letter-spacing: 1px;
-color: ${props => props.theme.linkColor};
+color: #2B2E3B;
 @media (max-width: 750px) { 
     font-size:15px;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as STYLED from './style'
 import { ThemeProvider } from 'styled-components'
+import { withRouter } from 'react-router-dom'
 
 class NavBar extends Component {
     constructor(props) {
@@ -21,34 +22,27 @@ class NavBar extends Component {
     render() {
         const percentVaule = this.state.mobileNav ? '100' : '0';
         const clicked = this.state.mobileNav ? 'clicked' : '';
-        let themeIcon;
-        if (this.props.pageTheme === 'dark') {
-            themeIcon = <STYLED.AdjustThemeDark onClick={this.props.changeTheme} />
-        } else {
-            themeIcon = <STYLED.AdjustThemeLight onClick={this.props.changeTheme} />
-        }
         const theme = {
             toggle: `${percentVaule}%`,
         };
-
+        const disablePathHome = this.props.location.pathname === '/' ? true : false
+        const disablePathAbout = this.props.location.pathname === '/about' ? true : false
+        const disablePathProjects = this.props.location.pathname === '/projects' ? true : false
+        const disablePathContact = this.props.location.pathname === '/contact' ? true : false
         return (
             <ThemeProvider theme={theme}>
                 <STYLED.FullNav>
-
                     <STYLED.NavFlex>
-                        <STYLED.TitleLink to='/' >Mohamed-sal-ah</STYLED.TitleLink>
+                        <STYLED.TitleNav to='/' style={{ pointerEvents: `${disablePathHome ? 'none' : 'auto'}` }}>Mohamed-sal-ah</STYLED.TitleNav >
                         <STYLED.ULNav>
                             <STYLED.TopListItem>
-                                <STYLED.LinkItem activeClassName='active-link' to='/about'>About</STYLED.LinkItem>
+                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathAbout ? 'none' : 'auto'}` }} activeClassName='active-link' to='/about'>About</STYLED.LinkItem>
                             </STYLED.TopListItem>
                             <STYLED.TopListItem>
-                                <STYLED.LinkItem activeClassName='active-link' to='/projects'>Projects</STYLED.LinkItem>
+                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathProjects ? 'none' : 'auto'}` }} activeClassName='active-link' to='/projects'>Projects</STYLED.LinkItem>
                             </STYLED.TopListItem>
                             <STYLED.TopListItem>
-                                <STYLED.LinkItem activeClassName='active-link' to='/contact'>Contact</STYLED.LinkItem>
-                            </STYLED.TopListItem>
-                            <STYLED.TopListItem>
-                                {themeIcon}
+                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathContact ? 'none' : 'auto'}` }} activeClassName='active-link' to='/contact'>Contact</STYLED.LinkItem>
                             </STYLED.TopListItem>
                             <STYLED.TopListItem>
                                 <STYLED.BarItems className={clicked} onClick={this.ToggleMobileNav}>
@@ -62,22 +56,20 @@ class NavBar extends Component {
                     <STYLED.MobileNav >
                         <STYLED.MobileUL>
                             <STYLED.MobileListItem>
-                                <STYLED.LinkItem activeClassName='active-link' to='/about'>About</STYLED.LinkItem>
+                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathAbout ? 'none' : 'auto'}` }} activeClassName='active-link' to='/about'>About</STYLED.LinkItem>
                             </STYLED.MobileListItem>
                             <STYLED.MobileListItem>
-                                <STYLED.LinkItem activeClassName='active-link' to='/projects'>Projects</STYLED.LinkItem>
+                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathProjects ? 'none' : 'auto'}` }} activeClassName='active-link' to='/projects'>Projects</STYLED.LinkItem>
                             </STYLED.MobileListItem>
                             <STYLED.MobileListItem>
-                                <STYLED.LinkItem activeClassName='active-link' to='/contact'>Contact</STYLED.LinkItem>
+                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathContact ? 'none' : 'auto'}` }} activeClassName='active-link' to='/contact'>Contact</STYLED.LinkItem>
                             </STYLED.MobileListItem>
                         </STYLED.MobileUL>
                     </STYLED.MobileNav>
                 </STYLED.FullNav>
             </ThemeProvider>
-
         )
     }
 
 }
-
-export default NavBar
+export default withRouter(NavBar)

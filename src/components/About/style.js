@@ -1,14 +1,25 @@
 import styled from 'styled-components'
 
-export const FullPage = styled.div`
-width: 100vw;
-height :100vh;
-background-color: ${props => props.theme.backGround};
+export const AllPageMain = styled.div`
 display:flex;
- transition: 0.2s ease;
+flex-direction:column;
+justify-content:space-between;
+height:100vh;
+position: absolute;
+left: 0;
+right: 0;
+background-color: #FFFCFB;
+`
+
+export const FullPage = styled.main`
+width: 100vw;
+height:100%;
+background-color: #FFFFFF;
+display:flex;
+transition: 0.2s ease;
 justify-content :center;
 @media (max-width: 750px) {
-    padding: 80px 0;
+   margin-top: 9vh;
 }
 `
 export const FlexBox = styled.section`
@@ -32,24 +43,21 @@ width:50%;
 
 export const ArticleBox = styled(TwoSidersBox)`
 flex-direction:column;
-color: ${props => props.theme.fontColor};
- transition: 0.2s ease;
- 
+color: #000000;
+transition: 0.2s ease;
 `
 
 export const ArticleTitle = styled.h1`
 margin :0;
 font-size:50px;
-font-family : 'Roboto';
-color : ${props => props.theme.titleColor};
+font-family : Roboto;
+color : #104687;
 padding-bottom: 10px;
 text-align:center;
-font-weight: 400;
 text-transform: uppercase;
 @media (max-width: 750px) { 
     font-size:30px;
 }
-
 `
 
 export const ArticleText = styled.p`
@@ -57,7 +65,7 @@ margin:0;
 font-size:15px;
 text-align:center;
 padding:0 20px;
-font-family : 'Roboto';
+font-family : Roboto;
 `
 
 export const Image = styled.img`

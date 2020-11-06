@@ -4,7 +4,7 @@
 }
 @font-face{
   src: url('./Font/Montserrat-ExtraLight.ttf');
-  font-family: Montserrat;
+  font-family: Montserrat-Light;
 }
 
 @font-face{
@@ -14,19 +14,36 @@
 
 @font-face{
   src: url('./Font/Roboto-Thin.ttf');
-  font-family: Roboto;
-  font-weight: 100;
+  font-family: Roboto-Light;
 }
 
-:root {
-   --theme:#ffffff;
+.page {
+    position: absolute;
+    left: 0;
+    right: 0;
 }
-[theme='dark']{
---theme:#000000;
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
 }
-$themeColor : var(--theme);
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in 750ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+
 
 body{
-    background-color: $themeColor;
     margin :0;
 }

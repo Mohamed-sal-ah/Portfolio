@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-import { Moon } from '@styled-icons/feather/Moon'
-import { Sun } from '@styled-icons/feather/Sun'
+import { Link, NavLink } from 'react-router-dom'
 
 export const FullNav = styled.div`
 width:100%;
@@ -14,17 +12,18 @@ flex-direction: row;
 justify-content: space-between;
 align-items:center;
 transition: 0.2s ease;
-background-color: #082245;
+background-color: #FFFFFF;
 width:100%;
+box-shadow: 0 2px 3px #cbcbcb;
 `
 
-export const TitleLink = styled(NavLink)`
-font-family : 'Montserrat';
+export const TitleNav = styled(Link)`
+font-family : Montserrat;
 font-size :35px;
+font-weight: bold;
 text-transform: uppercase;
-font-weight:100;
 text-decoration : none;
-color: #FFFFFF;
+color: #225588;
 padding:5px;
 margin: 10px;
 @media (max-width: 750px) { 
@@ -34,16 +33,21 @@ margin: 10px;
   font-size:17px
 }
 `
-export const AdjustThemeLight = styled(Sun)`
-color : #FFFFFF;
-height:30px;
-cursor:pointer;
-`
-
-export const AdjustThemeDark = styled(Moon)`
-color : #FFFFFF;
-height:30px;
-cursor:pointer;
+export const TitleNotNav = styled.h1`
+font-family : Montserrat;
+font-size :35px;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration : none;
+color: #225588;
+padding:5px;
+margin: 10px;
+@media (max-width: 750px) { 
+  font-size:23px;
+}
+@media (max-width : 375px) {
+  font-size:17px
+}
 `
 
 export const ULNav = styled.ul`
@@ -63,7 +67,7 @@ padding:13px;
 &:last-child{
   display:none;
 }
-@media (max-width: 805px) { 
+@media (max-width: 750px) { 
 &:first-child{
   display:none;
 }
@@ -73,6 +77,9 @@ padding:13px;
 &:nth-child(3){
   display: none;
 }
+&:nth-child(4){
+  display: none;
+}
 &:last-child{
   display:block;
 }
@@ -80,38 +87,38 @@ padding:13px;
 `
 
 export const LinkItem = styled(NavLink)`
-font-family: 'Roboto';
+font-family: Roboto-Light;
+font-weight: bold;
 cursor:pointer;
-font-weight:100;
 text-decoration:none;
- transition: 0.2s ease;
-color: #FFFFFF;
+transition: 0.2s ease;
+color: #225588;
 font-size:20px;
 padding-left:2px;
 padding-right:2px;
 padding-bottom: 3px;
 transition:none;
- &.active-link {
+&.active-link {
     border-bottom:2px solid #C15261;
   }
-  &.active-link:hover {
+&.active-link:hover {
     border-bottom:2px solid #C15261;
   }
 
-  &:hover {
+&:hover {
     border-bottom:2px solid #619E9E;
   }
 `
 export const BarItems = styled.div`
 cursor:pointer;
-  display:flex;
-  flex-direction:column;
-  &.clicked > {
+display:flex;
+flex-direction:column;
+&.clicked > {
   :nth-child(1){
   transform: translateY(9px) rotate(-45deg);
 }
 &:nth-child(2){
- opacity: 0;
+  opacity: 0;
   transform: translateX(50px) ;
 }
 &:nth-child(3){
@@ -122,7 +129,7 @@ cursor:pointer;
 
 
 export const Bar = styled.span`
-background-color: #ffffff;
+background-color: #225588;
 display: block;
 margin: 3px 0;
 border-radius: 5px;
@@ -144,19 +151,20 @@ transition:0.5s ease;
 export const MobileNav = styled.div`
 display:none;
 @media (max-width: 850px) { 
-   overflow-y: hidden;
+  z-index:-1;
+  overflow-y: hidden;
   display:flex;
   position:fixed;
-    width: 100%;
-     transition: 0.5s;
-    height: ${props => props.theme.toggle};
-  background-color: #0b2e5b;
+  width: 100%;
+  transition: 0.5s;
+  height: ${props => props.theme.toggle};
+  background-color: #F2F2F2;
 }
 `
 export const MobileUL = styled(ULNav)`
   flex-direction: column;
-   position: relative;
-   justify-content:start;
+  position: relative;
+  justify-content:start;
   width:100%;
 `
 export const MobileListItem = styled(ListItem)`
@@ -164,9 +172,10 @@ font-size:30px;
 padding:10px 0;
 transition: 0.1s;
 display:block;
-font-family:'Roboto';
-    width: 100%;
-    text-align: center;
+font-family:Roboto-Light;
+font-weight: bold;
+width: 100%;
+text-align: center;
 `
 
 
