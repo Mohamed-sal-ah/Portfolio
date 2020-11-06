@@ -9,7 +9,7 @@ import {
   TransitionGroup,
 } from 'react-transition-group';
 
-import './App.scss'
+import './App.css'
 const App = () => (
   <Route
     render={({ location }) => (

@@ -2,7 +2,6 @@ import React from 'react'
 import * as STYLED from './style'
 import NavBar from '../Navbar'
 import EmailImage from '../../images/email.jpg'
-import Footer from '../Footer'
 
 const ContactPage = () => (
     <STYLED.AllPageMain classname="page">

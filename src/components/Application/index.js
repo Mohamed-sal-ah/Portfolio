@@ -1,9 +1,7 @@
 import React from 'react'
 import * as STYLED from './style'
 import NavBar from '../Navbar'
-import Footer from '../Footer'
 import ProjectImg from '../../images/bild.png'
-/// add mobile to background
 const ApplicationPage = () => (
     <STYLED.AllPageMain classname="page">
         <NavBar />

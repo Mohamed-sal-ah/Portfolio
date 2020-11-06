@@ -2,7 +2,6 @@ import React from 'react'
 import * as STYLED from './style'
 import AboutImage from '../../images/ben-kolde-bs2Ba7t69mM-unsplash.jpg'
 import NavBar from '../Navbar'
-import Footer from '../Footer'
 const AboutPage = () => (
     <STYLED.AllPageMain classname="page">
         <NavBar />
