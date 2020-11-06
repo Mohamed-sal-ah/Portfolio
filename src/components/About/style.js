@@ -37,6 +37,7 @@ display:flex;
 width:50%;
 @media (max-width: 750px) { 
     width: 100%;
+    height:60vh;
     padding:30px 0;
 }
 `
@@ -69,6 +70,10 @@ font-family : Roboto;
 `
 
 export const Image = styled.img`
-height:60vh;
+height:420px;
 border-radius:9px;
+width: 300px;
+@media (max-width: 750px) { 
+    height:100%;
+}
 `

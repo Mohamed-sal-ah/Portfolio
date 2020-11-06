@@ -76,6 +76,7 @@ color: #000000;
 margin:0;
 @media (max-width: 750px) { 
   font-size:15px;  
+  text-align:center;
 }
 `
 
