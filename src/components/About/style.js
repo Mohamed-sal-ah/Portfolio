@@ -4,7 +4,7 @@ export const AllPageMain = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-height:100vh;
+height:95vh;
 position: absolute;
 left: 0;
 right: 0;
@@ -18,9 +18,6 @@ background-color: #FFFFFF;
 display:flex;
 transition: 0.2s ease;
 justify-content :center;
-@media (max-width: 750px) {
-   margin-top: 9vh;
-}
 `
 export const FlexBox = styled.section`
 display:flex;
@@ -75,5 +72,10 @@ border-radius:9px;
 width: 300px;
 @media (max-width: 750px) { 
     height:100%;
+    margin-top: 14vh;
+}
+@media (max-width: 550px){
+    width:90%;
+    border-radius:0;
 }
 `

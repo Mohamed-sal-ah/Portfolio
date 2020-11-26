@@ -1,12 +1,9 @@
 import React from 'react'
 import * as STYLED from './style'
-import NavBar from '../Navbar'
 import Ilustation from '../../images/img1.png'
-import Footer from '../Footer'
 
 const HomePage = () => (
     <STYLED.AllPageMain>
-        <NavBar />
         <STYLED.FullPage>
             <STYLED.FlexBox>
                 <STYLED.TextBox>
@@ -19,7 +16,6 @@ const HomePage = () => (
                 </STYLED.TwoSidersBox>
             </STYLED.FlexBox>
         </STYLED.FullPage>
-        <Footer />
     </STYLED.AllPageMain>
 )
 

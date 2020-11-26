@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const FullNav = styled.div`
 width:100%;
 position:fixed;
+z-index:1;
 `
 
 export const NavFlex = styled.nav`
@@ -17,15 +18,18 @@ width:100%;
 box-shadow: 0 2px 3px #cbcbcb;
 `
 
-export const TitleNav = styled(Link)`
+export const TitleNav = styled.button`
 font-family : Montserrat;
 font-size :35px;
 font-weight: bold;
 text-transform: uppercase;
 text-decoration : none;
+background:none;
+border:none;
 color: #225588;
 padding:5px;
 margin: 10px;
+outline:none;
 @media (max-width: 750px) { 
   font-size:23px;
 }
@@ -98,6 +102,8 @@ padding-left:2px;
 padding-right:2px;
 padding-bottom: 3px;
 transition:none;
+border:none;
+outline:none;
 &.active-link {
     border-bottom:2px solid #C15261;
   }
@@ -109,6 +115,26 @@ transition:none;
     border-bottom:2px solid #619E9E;
   }
 `
+
+export const LinkItemMobile = styled.button`
+font-family: Roboto-Light;
+font-weight: bold;
+cursor:pointer;
+text-decoration:none;
+transition: 0.2s ease;
+color: #225588;
+font-size:20px;
+padding-left:2px;
+padding-right:2px;
+padding-bottom: 3px;
+transition:none;
+border:none;
+outline:none;
+&.active-link {
+    border-bottom:2px solid #C15261;
+  }
+`
+
 export const BarItems = styled.div`
 cursor:pointer;
 display:flex;

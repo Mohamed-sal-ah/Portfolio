@@ -4,7 +4,7 @@ export const AllPageMain = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-height:100vh;
+height:95vh;
 position: absolute;
 left: 0;
 right: 0;

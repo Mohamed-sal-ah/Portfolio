@@ -1,11 +1,9 @@
 import React from 'react'
 import * as STYLED from './style'
-import NavBar from '../Navbar'
 import EmailImage from '../../images/email.jpg'
 
 const ContactPage = () => (
     <STYLED.AllPageMain classname="page">
-        <NavBar />
         <STYLED.FullPage>
             <STYLED.FlexBox>
                 <STYLED.TwoSidersBox>

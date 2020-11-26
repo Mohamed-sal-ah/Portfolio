@@ -1,10 +1,9 @@
 import React from 'react'
 import * as STYLED from './style'
-import NavBar from '../Navbar'
 import ProjectImg from '../../images/bild.png'
+
 const ApplicationPage = () => (
     <STYLED.AllPageMain classname="page">
-        <NavBar />
         <STYLED.FullPage>
             <STYLED.FlexBox>
                 <STYLED.ArticleBox>

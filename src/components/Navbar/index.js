@@ -19,6 +19,18 @@ class NavBar extends Component {
             this.setState({ mobileNav: true })
         }
     }
+
+    handleTitleClick = e => {
+        e.preventDefault();
+        this.props.history.push(`/`)
+        setTimeout(() => this.setState({ mobileNav: false }), 1000)
+    }
+
+    handleMobileClick = e => {
+        e.preventDefault();
+        setTimeout(() => this.setState({ mobileNav: false }), 1000)
+        this.props.history.push(`/${e.target.id}`)
+    }
     render() {
         const percentVaule = this.state.mobileNav ? '100' : '0';
         const clicked = this.state.mobileNav ? 'clicked' : '';
@@ -33,7 +45,7 @@ class NavBar extends Component {
             <ThemeProvider theme={theme}>
                 <STYLED.FullNav>
                     <STYLED.NavFlex>
-                        <STYLED.TitleNav to='/' style={{ pointerEvents: `${disablePathHome ? 'none' : 'auto'}` }}>Mohamed-sal-ah</STYLED.TitleNav >
+                        <STYLED.TitleNav onClick={this.handleTitleClick} disabled={disablePathHome} style={{ cursor: `${disablePathHome ? 'auto' : 'pointer'}` }}>Mohamed-sal-ah</STYLED.TitleNav >
                         <STYLED.ULNav>
                             <STYLED.TopListItem>
                                 <STYLED.LinkItem style={{ pointerEvents: `${disablePathAbout ? 'none' : 'auto'}` }} activeClassName='active-link' to='/about'>About</STYLED.LinkItem>
@@ -56,13 +68,13 @@ class NavBar extends Component {
                     <STYLED.MobileNav >
                         <STYLED.MobileUL>
                             <STYLED.MobileListItem>
-                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathAbout ? 'none' : 'auto'}` }} activeClassName='active-link' to='/about'>About</STYLED.LinkItem>
+                                <STYLED.LinkItemMobile onClick={this.handleMobileClick} disabled={disablePathAbout} style={{ cursor: `${disablePathAbout ? 'auto' : 'pointer'}` }} className={disablePathAbout ? 'active-link' : ''} id='about'>About</STYLED.LinkItemMobile>
                             </STYLED.MobileListItem>
                             <STYLED.MobileListItem>
-                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathProjects ? 'none' : 'auto'}` }} activeClassName='active-link' to='/projects'>Projects</STYLED.LinkItem>
+                                <STYLED.LinkItemMobile onClick={this.handleMobileClick} disabled={disablePathProjects} style={{ cursor: `${disablePathProjects ? 'auto' : 'pointer'}` }} className={disablePathProjects ? 'active-link' : ''} id='projects'>Projects</STYLED.LinkItemMobile>
                             </STYLED.MobileListItem>
                             <STYLED.MobileListItem>
-                                <STYLED.LinkItem style={{ pointerEvents: `${disablePathContact ? 'none' : 'auto'}` }} activeClassName='active-link' to='/contact'>Contact</STYLED.LinkItem>
+                                <STYLED.LinkItemMobile onClick={this.handleMobileClick} disabled={disablePathContact} style={{ cursor: `${disablePathContact ? 'auto' : 'pointer'}` }} className={disablePathContact ? 'active-link' : ''} id='contact'>Contact</STYLED.LinkItemMobile>
                             </STYLED.MobileListItem>
                         </STYLED.MobileUL>
                     </STYLED.MobileNav>

@@ -3,10 +3,11 @@ import { Github } from '@styled-icons/boxicons-logos/Github'
 import { Mail } from '@styled-icons/heroicons-outline/Mail'
 
 export const FooterStyle = styled.footer`
+top:100vh;
+position: absolute;
 height:100px;
 width:100%;
 background-color: #FFFFFF;
-transition: 0.2s ease;
 display:flex;
 flex-direction: row;
 align-items:center;

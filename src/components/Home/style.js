@@ -5,11 +5,14 @@ export const AllPageMain = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-height:100vh;
+height:95vh;
 left: 0;
 position: absolute;
 background-color: #FFFCFB;
 right: 0;
+@media (max-width: 750px) { 
+  height:100vh;
+}
 `
 
 export const FullPage = styled.main`
@@ -23,7 +26,6 @@ flex-direction: row;
 justify-content: space-around;
 @media (max-width: 750px) { 
   flex-direction:column-reverse;
-  margin-top: 7vh;
 }
 `
 export const FlexBox = styled.section`
