@@ -8,7 +8,6 @@ import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
-
 import './App.css'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
