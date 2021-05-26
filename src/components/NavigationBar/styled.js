@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { Link } from "react-scroll";
+import {Adjust} from '@styled-icons/boxicons-regular/Adjust'
+import theme from '../theme'
+import Modal from "react-modal";
 
 export const FullNav = styled.div`
 width:100%;
@@ -12,25 +15,27 @@ display:flex;
 flex-direction: row;
 justify-content: space-between;
 align-items:center;
-transition: 0.2s ease;
-background-color: #FFFFFF;
+transition: 0.3s ease;
+background-color: ${props => props.theme.backgroundColor};
 width:100%;
-box-shadow: 0 2px 3px #cbcbcb;
+box-shadow: ${props => props.theme.boxShadow};
+/* box-shadow: 0 2px 3px #cbcbcb; */
 `
 
 export const TitleNav = styled.button`
-font-family : Montserrat;
+cursor: pointer;
+font-family : ${theme.fonts.MontserratRegular};
 font-size :35px;
 font-weight: bold;
 text-transform: uppercase;
 text-decoration : none;
 background:none;
 border:none;
-color: #225588;
+color: ${props => props.theme.fontColor};
 padding:5px;
 margin: 10px;
 outline:none;
-@media (max-width: 750px) { 
+@media (max-width: 810px) { 
   font-size:23px;
 }
 @media (max-width : 375px) {
@@ -38,12 +43,12 @@ outline:none;
 }
 `
 export const TitleNotNav = styled.h1`
-font-family : Montserrat;
+font-family : ${theme.fonts.MontserratRegular};
 font-size :35px;
 font-weight: bold;
+color: ${props => props.theme.fontColor};
 text-transform: uppercase;
 text-decoration : none;
-color: #225588;
 padding:5px;
 margin: 10px;
 @media (max-width: 750px) { 
@@ -84,19 +89,22 @@ padding:13px;
 &:nth-child(4){
   display: none;
 }
+&:nth-child(5){
+  display: none;
+}
 &:last-child{
   display:block;
 }
 }
 `
 
-export const LinkItem = styled(NavLink)`
-font-family: Roboto-Light;
+export const LinkItem = styled(Link)`
+font-family: ${theme.fonts.RobotoThin};
 font-weight: bold;
 cursor:pointer;
 text-decoration:none;
 transition: 0.2s ease;
-color: #225588;
+color: ${props => props.theme.fontColor};
 font-size:20px;
 padding-left:2px;
 padding-right:2px;
@@ -104,10 +112,10 @@ padding-bottom: 3px;
 transition:none;
 border:none;
 outline:none;
-&.active-link {
+&.active {
     border-bottom:2px solid #C15261;
   }
-&.active-link:hover {
+&.active:hover {
     border-bottom:2px solid #C15261;
   }
 
@@ -116,23 +124,18 @@ outline:none;
   }
 `
 
-export const LinkItemMobile = styled.button`
-font-family: Roboto-Light;
-font-weight: bold;
-cursor:pointer;
-text-decoration:none;
-transition: 0.2s ease;
-color: #225588;
-font-size:20px;
-padding-left:2px;
-padding-right:2px;
-padding-bottom: 3px;
-transition:none;
+export const ChangeThemeButton = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
 border:none;
-outline:none;
-&.active-link {
-    border-bottom:2px solid #C15261;
-  }
+background:none;
+`
+
+export const ChangeThemeIcon = styled(Adjust)`
+fill : ${props => props.theme.fontColor};
+width:30px;
+height:30px;
 `
 
 export const BarItems = styled.div`
@@ -155,7 +158,8 @@ flex-direction:column;
 
 
 export const Bar = styled.span`
-background-color: #225588;
+transition: 0.3s ease;
+background-color: ${props => props.theme.fontColor};
 display: block;
 margin: 3px 0;
 border-radius: 5px;
@@ -174,34 +178,19 @@ transition:0.5s ease;
 }
 `
 
-export const MobileNav = styled.div`
-display:none;
-@media (max-width: 850px) { 
-  z-index:-1;
-  overflow-y: hidden;
-  display:flex;
-  position:fixed;
-  width: 100%;
-  transition: 0.5s;
-  height: ${props => props.theme.toggle};
-  background-color: #F2F2F2;
-}
+export const MobileNavModal = styled(Modal)`
+outline: none;
+position: absolute;
+background-color:${props => props.theme.backgroundColor};
+  top: 190px;
+  left: calc(100% - 165px);
+  right: auto;
+  bottom: auto;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+  width: fit-content;
+  border:none;
+  border-radius: 5px;
+  transition: 0.3s ease;
 `
-export const MobileUL = styled(ULNav)`
-  flex-direction: column;
-  position: relative;
-  justify-content:start;
-  width:100%;
-`
-export const MobileListItem = styled(ListItem)`
-font-size:30px;
-padding:10px 0;
-transition: 0.1s;
-display:block;
-font-family:Roboto-Light;
-font-weight: bold;
-width: 100%;
-text-align: center;
-`
-
-

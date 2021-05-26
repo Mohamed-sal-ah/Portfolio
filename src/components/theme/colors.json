@@ -1,0 +1,26 @@
+{
+    "black" : "#000000",
+    "black_blue" : {
+        "primary" : "#2B2E3B",
+        "secondary" : "#21232A",
+        "trinary": "#171921"
+    },
+    "blue" :{
+        "primary" : "#225588",
+        "secondary" : "#104687",
+        "light_blue" : "#4AA5FF"
+    },
+    "gradient": {
+        "light": "rgba(0,0,0,0.3)",
+        "dark": "rgba(255,255,255,0.3)"
+    },
+    "gray" : "#F2F2F2",
+    "gray_blue" : "#4D4F5A",
+    "green" : {
+        "dark" : "#1D4F4F",
+        "light" : "#619E9E"
+    },
+    "light_gray" : "#EDEDED",
+    "red" : "#C15261",
+    "white" : "#FFFFFF"
+}

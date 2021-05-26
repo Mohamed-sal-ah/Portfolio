@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { Github } from '@styled-icons/boxicons-logos/Github'
 import { Mail } from '@styled-icons/heroicons-outline/Mail'
+import theme from '../theme'
 
 export const FooterStyle = styled.footer`
 top:100vh;
-position: absolute;
 height:100px;
 width:100%;
-background-color: #FFFFFF;
+background-color:${theme.colors.black_blue.primary};
 display:flex;
 flex-direction: row;
 align-items:center;
@@ -18,10 +18,10 @@ justify-content: space-between;
 }
 `
 export const Infotext = styled.h4`
-color: #2B2E3B;
+color: ${theme.colors.white};
 transition: 0.2s ease;
 margin:0;
-font-family:Montserrat;
+font-family:${theme.fonts.MontserratRegular};
 font-size: 17px;
 padding-left: 20px;
 font-weight:bold;
@@ -39,12 +39,12 @@ padding:0 20px;
 `
 
 export const GithubIcon = styled(Github)`
-color:#2B2E3B;
+color: ${theme.colors.white};
 height: 40px;
 width: 40px;
 `
 export const MailIcon = styled(Mail)`
-color:#2B2E3B;
+color: ${theme.colors.white};
 height: 40px;
 width: 40px;
 `

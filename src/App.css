@@ -1,50 +1,22 @@
-@font-face{
-  src: url('./Font/Montserrat-Regular.ttf');
-  font-family: Montserrat;
+@font-face {
+  src: url("./Font/Montserrat-Regular.ttf");
+  font-family: Montserrat-Regular;
 }
-@font-face{
-  src: url('./Font/Montserrat-ExtraLight.ttf');
+@font-face {
+  src: url("./Font/Montserrat-ExtraLight.ttf");
   font-family: Montserrat-Light;
 }
 
-@font-face{
-  src: url('./Font/Roboto-Regular.ttf');
-  font-family: Roboto;
+@font-face {
+  src: url("./Font/Roboto-Regular.ttf");
+  font-family: Roboto-Regular;
 }
 
-@font-face{
-  src: url('./Font/Roboto-Thin.ttf');
-  font-family: Roboto-Light;
+@font-face {
+  src: url("./Font/Roboto-Thin.ttf");
+  font-family: Roboto-Thin;
 }
 
-.page {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
-.fade-appear,
-.fade-enter {
-    opacity: 0;
-    z-index: 0;
-}
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 1s ease-in 750ms;
-}
-
-.fade-exit {
-    opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-
-
-body{
-    margin :0;
+body {
+  margin: 0;
 }
