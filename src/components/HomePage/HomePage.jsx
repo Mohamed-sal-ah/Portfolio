@@ -40,6 +40,15 @@ const HomePage = ({ colorTheme }) => {
               <STYLED.Image src={Ilustation} />
             </CommonStyled.TwoSidersBox>
           </CommonStyled.FlexBox>
+          <STYLED.SrollDownLink
+            spy={false}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            to="projects"
+          >
+            <STYLED.ChevronDown />
+          </STYLED.SrollDownLink>
         </CommonStyled.FullPage>
       </STYLED.HomeAllPageMain>
     </ThemeProvider>

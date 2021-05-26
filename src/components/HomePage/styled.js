@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from "react-scroll";
 import CommonStyled from "../CommonStyled";
 import theme from '../theme';
+import {ChevronDownOutline} from '@styled-icons/evaicons-outline'
 
 export const HomeAllPageMain = styled(CommonStyled.AllPageMain)`
 @media (max-width: 750px) { 
@@ -60,4 +61,20 @@ border-radius: 3px;
 export const Image = styled.img`
 height:40vh;
 overflow: hidden;
+`
+
+export const SrollDownLink = styled(Link)`
+@media (max-width: 750px) { 
+  display:none;
+}
+position:absolute;
+bottom:1%;
+text-decoration:none;
+cursor:pointer;
+`
+
+export const ChevronDown = styled(ChevronDownOutline)`
+fill:${props => props.theme.textColor};
+width: 80px;
+height: 80px;
 `
