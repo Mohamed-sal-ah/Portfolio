@@ -7,11 +7,17 @@ export const useColorTheme = () => {
 };
 
 export const ColorThemeProvider = ({ children }) => {
-  const [colorTheme, setColorTheme] = useState("light");
+  const hasLocal = JSON.parse(localStorage.getItem("colorTheme"));
+  const setLocalBool = hasLocal ? hasLocal.isDark : false;
+  const [colorTheme, setColorTheme] = useState(
+    !setLocalBool ? "light" : "dark"
+  );
   const toggleTheme = () => {
     if (colorTheme === "light") {
+      localStorage.setItem("colorTheme", JSON.stringify({ isDark: true }));
       setColorTheme("dark");
     } else {
+      localStorage.setItem("colorTheme", JSON.stringify({ isDark: false }));
       setColorTheme("light");
     }
   };
