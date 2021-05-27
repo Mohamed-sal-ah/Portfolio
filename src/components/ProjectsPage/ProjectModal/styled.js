@@ -60,6 +60,13 @@ height:50px;
 }
 `
 
+export const PreviewImageLink = styled.a`
+color:none;
+background-color: none;
+text-decoration:none;
+
+`
+
 export const PreviewImage = styled.img`
 max-width: 600px;
 @media (max-width: 750px) {
