@@ -61,10 +61,10 @@ height:50px;
 `
 
 export const PreviewImageLink = styled.a`
-color:none;
-background-color: none;
 text-decoration:none;
-
+display: flex;
+justify-content: center;
+align-items: center;
 `
 
 export const PreviewImage = styled.img`
