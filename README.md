@@ -1,6 +1,6 @@
 # Notes List App
 
-This is a Project that i have been working on my personal protfolio [Mohamed-sal-ah](https://mohamed-sal-ah.github.io/Portfolio/).
+This is a personal Project that i have been working on my personal portfolio [Mohamed-sal-ah](https://mohamed-sal-ah.github.io/Portfolio/).
 
 ## Description
 
