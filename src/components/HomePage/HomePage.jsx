@@ -24,7 +24,7 @@ const HomePage = ({ colorTheme }) => {
             <STYLED.TextBox>
               <STYLED.Title>Hello</STYLED.Title>
               <STYLED.Text>
-                I’m Mohamed Salah Ahmed. I’m front end developer student.
+                I’m Mohamed Salah Ahmed. I’m front end developer.
               </STYLED.Text>
               <STYLED.ButtonLink
                 spy={false}
