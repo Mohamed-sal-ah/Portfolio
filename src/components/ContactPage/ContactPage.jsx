@@ -30,7 +30,7 @@ const ContactPage = ({ colorTheme }) => {
                 </STYLED.EmailCirlce>
                 <STYLED.LinkTitle>Email</STYLED.LinkTitle>
                 <STYLED.ContactLink href="mailto:mohamedsalahahmed@outlook.com">
-                  mohamedsalahahmed @outlook.com
+                  mohamedsalahahmed@outlook.com
                 </STYLED.ContactLink>
               </STYLED.ContactDiv>
             </CommonStyled.TwoSidersBox>
