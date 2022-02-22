@@ -13,9 +13,9 @@ flex-direction: column;
 align-items:center;
 justify-content: center;
 border: none;
+border-radius: 5px;
 @media (max-width: 750px) {
     width: 80%;
-    border-radius:0;
 }
 `
 
@@ -32,7 +32,7 @@ font-size: 20px;
 `
 
 export const ModalStyled = styled(Modal)`
-outline: 0;
+  outline: 0;
   position: absolute;
   background-color: ${props => props.theme.modalColor};
   top: 50%;
@@ -44,6 +44,7 @@ outline: 0;
   margin-right: -50%;
   width: fit-content;
   border:none;
+  border-radius: 5px;
   @media (max-width: 750px) {
       width: 90%;
   }

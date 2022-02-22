@@ -9,6 +9,7 @@ gap:30px;
 `
 
 export const SkillIconItem = styled.div`
+border-radius:5px;
 background-color:${theme.colors.gray_blue};
 display:flex;
 align-items: center;

@@ -42,7 +42,7 @@ margin:0;
 export const EmailCirlce = styled.span`
 padding:10px;
 background-color: ${theme.colors.red};
-border-radius:50%;
+border-radius:5px;
 `
 
 export const LinkTitle = styled.h3`
@@ -78,5 +78,4 @@ width:50px;
 
 export const Image = styled.img`
 width:90%;
-border-radius:9px;
 `
