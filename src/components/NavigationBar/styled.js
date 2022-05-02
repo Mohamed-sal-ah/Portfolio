@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link } from "react-scroll";
-import {Adjust} from '@styled-icons/boxicons-regular/Adjust'
 import theme from '../theme'
 import Modal from "react-modal";
 
@@ -15,48 +14,23 @@ display:flex;
 flex-direction: row;
 justify-content: space-between;
 align-items:center;
-transition: 0.3s ease;
-background-color: ${props => props.theme.backgroundColor};
+background-color: ${theme.colors.black_blue.trinary};
 width:100%;
-box-shadow: ${props => props.theme.boxShadow};
-/* box-shadow: 0 2px 3px #cbcbcb; */
 `
 
 export const TitleNav = styled.button`
 cursor: pointer;
-font-family : ${theme.fonts.MontserratRegular};
-font-size :35px;
+font-family : ${theme.fonts.NunitoBold};
+font-size:1.25em;
 font-weight: bold;
 text-transform: uppercase;
 text-decoration : none;
 background:none;
 border:none;
-color: ${props => props.theme.fontColor};
+color: ${theme.colors.light_blue};
 padding:5px;
 margin: 10px;
 outline:none;
-@media (max-width: 810px) { 
-  font-size:23px;
-}
-@media (max-width : 375px) {
-  font-size:17px
-}
-`
-export const TitleNotNav = styled.h1`
-font-family : ${theme.fonts.MontserratRegular};
-font-size :35px;
-font-weight: bold;
-color: ${props => props.theme.fontColor};
-text-transform: uppercase;
-text-decoration : none;
-padding:5px;
-margin: 10px;
-@media (max-width: 750px) { 
-  font-size:23px;
-}
-@media (max-width : 375px) {
-  font-size:17px
-}
 `
 
 export const ULNav = styled.ul`
@@ -73,75 +47,40 @@ list-style :none;
 
 export const TopListItem = styled(ListItem)`
 padding:13px;
-&:last-child{
-  display:none;
-}
+display: ${props => props.mobileView ? 'none' : 'block'}; 
 @media (max-width: 750px) { 
-&:first-child{
-  display:none;
-}
-&:nth-child(2){
-  display: none;
-}
-&:nth-child(3){
-  display: none;
-}
-&:nth-child(4){
-  display: none;
-}
-&:nth-child(5){
-  display: none;
-}
-&:last-child{
-  display:block;
-}
-}
+display: ${props => !props.mobileView ? 'none' : 'block'}; 
+};
 `
 
 export const LinkItem = styled(Link)`
-font-family: ${theme.fonts.RobotoThin};
-font-weight: bold;
+font-family: ${theme.fonts.Nunito};
 cursor:pointer;
 text-decoration:none;
-transition: 0.2s ease;
-color: ${props => props.theme.fontColor};
-font-size:20px;
+color: ${theme.colors.white};
+font-size:0.7em;
 padding-left:2px;
 padding-right:2px;
 padding-bottom: 3px;
-transition:none;
 border:none;
+transition: 0.3s ease;
 outline:none;
-&.active {
-    border-bottom:2px solid #C15261;
+&.active, &.active:hover{
+    color: ${theme.colors.red};
   }
-&.active:hover {
-    border-bottom:2px solid #C15261;
-  }
-
 &:hover {
-    border-bottom:2px solid #619E9E;
+    color : ${theme.colors.gray};
   }
-`
-
-export const ChangeThemeButton = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
-border:none;
-background:none;
-`
-
-export const ChangeThemeIcon = styled(Adjust)`
-fill : ${props => props.theme.fontColor};
-width:30px;
-height:30px;
 `
 
 export const BarItems = styled.div`
 cursor:pointer;
 display:flex;
 flex-direction:column;
+&.clicked > *{
+  background-color:${theme.colors.red};
+}
+
 &.clicked > {
   :nth-child(1){
   transform: translateY(9px) rotate(-45deg);
@@ -158,8 +97,7 @@ flex-direction:column;
 
 
 export const Bar = styled.span`
-transition: 0.3s ease;
-background-color: ${props => props.theme.fontColor};
+background-color: ${theme.colors.white};
 display: block;
 margin: 3px 0;
 border-radius: 5px;
@@ -181,7 +119,7 @@ transition:0.5s ease;
 export const MobileNavModal = styled(Modal)`
 outline: none;
 position: absolute;
-background-color:${props => props.theme.backgroundColor};
+background-color:${theme.colors.black_blue.trinary};
   top: 190px;
   left: calc(100% - 165px);
   right: auto;

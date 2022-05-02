@@ -1,87 +1,54 @@
 import React from "react";
 import * as STYLED from "./styled";
-import Html5 from "../../images/html5.png";
-import Css3 from "../../images/css3.png";
-import JsLogo from "../../images/js-logo.png";
-import Figma from "../../images/figma.png";
-import GitIcon from "../../images/git-icon.png";
-import ReactLogo from "../../images/react-logo.png";
 import CommonStyled from "../CommonStyled";
-import theme from "../theme";
-import { ThemeProvider } from "styled-components";
+import {Git,ReactLogo,Figma,Html5,Css3,Javascript,Nodejs,Vuejs,Angular} from '@styled-icons/boxicons-logos'
 
-const SkillsPage = ({ colorTheme }) => {
-  const isLight = colorTheme === "light";
-  const styledTheme = {
-    backgroundColor: isLight
-      ? theme.colors.light_gray
-      : theme.colors.black_blue.secondary,
-    titleColor: isLight
-      ? theme.colors.blue.secondary
-      : theme.colors.blue.light_blue,
-    textColor: isLight ? theme.colors.gray_blue : theme.colors.white,
-  };
+const SkillsPage = () => {
   return (
-    <ThemeProvider theme={styledTheme}>
-      <CommonStyled.AllPageMain name="skills">
+      <CommonStyled.AllPageMain name="skills" secondary="true">
         <CommonStyled.FullPage>
           <STYLED.SkillFlexBox>
             <CommonStyled.ArticleBox>
-              <CommonStyled.TextTitle>Skills</CommonStyled.TextTitle>
+              <CommonStyled.TextTitle>MY SKILLS</CommonStyled.TextTitle>
               <CommonStyled.Text>
-                Here some of the skills that i do for web development.
+                Here is a list of my tech skills that I have learned during my path
+                to become Frontend Developent which includes UI/UX design. 
               </CommonStyled.Text>
             </CommonStyled.ArticleBox>
             <CommonStyled.TwoSidersBox>
               <STYLED.SkillIconsGrid>
-                <STYLED.SkillIconItem>
-                  <img
-                    style={{ height: "53px" }}
-                    src={ReactLogo}
-                    alt="React logo"
-                  />
-                </STYLED.SkillIconItem>
-                <STYLED.SkillIconItem>
-                  <img
-                    style={{ width: "53px", height: "53px" }}
-                    src={GitIcon}
-                    alt="Git icon"
-                  />
-                </STYLED.SkillIconItem>
-                <STYLED.SkillIconItem>
-                  <img
-                    style={{ width: "53px", height: "53px" }}
-                    src={Figma}
-                    alt="Fimga logo"
-                  />
-                </STYLED.SkillIconItem>
-                <STYLED.SkillIconItem>
-                  <img
-                    style={{ width: "53px", height: "53px" }}
-                    src={Html5}
-                    alt="Html5 logo"
-                  />
-                </STYLED.SkillIconItem>
-                <STYLED.SkillIconItem>
-                  <img
-                    style={{ width: "53px", height: "53px" }}
-                    src={Css3}
-                    alt="Css3 logo"
-                  />
-                </STYLED.SkillIconItem>
-                <STYLED.SkillIconItem>
-                  <img
-                    style={{ width: "53px", height: "53px" }}
-                    src={JsLogo}
-                    alt="js logo"
-                  />
-                </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <ReactLogo title="React"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Git title="Git"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Figma title="Figma"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Html5 title="HTML5"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Css3 title="CSS3"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Javascript title="Javascript"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Nodejs title="Node.js"/>
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Vuejs title="Vue.js" />
+                  </STYLED.SkillIconItem>
+                  <STYLED.SkillIconItem>
+                    <Angular title="Angular" />
+                  </STYLED.SkillIconItem>
               </STYLED.SkillIconsGrid>
             </CommonStyled.TwoSidersBox>
           </STYLED.SkillFlexBox>
         </CommonStyled.FullPage>
       </CommonStyled.AllPageMain>
-    </ThemeProvider>
   );
 };
 

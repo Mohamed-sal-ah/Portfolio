@@ -1,51 +1,85 @@
 import styled from 'styled-components'
 import theme from '../theme'
-import Modal from "react-modal";
 
-export const ProjectViewButton = styled.button`
-cursor: pointer;
-padding:20px 0; 
-background-color: ${theme.colors.gray_blue};
+export const ProjectsDiv = styled.div`
 height:fit-content;
-width: 90%;
 display: flex;
 flex-direction: column;
-align-items:center;
 justify-content: center;
-border: none;
-border-radius: 5px;
+align-items: center;
+margin:0;
 @media (max-width: 750px) {
-    width: 80%;
+    width:95vw;
+}
+@media (max-width: 350px) {
+    width:100%;
 }
 `
 
-export const ProjectImg = styled.img`
-max-width:90%;
+export const ProjectGrid = styled.ul`
+    margin: 20px auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 0fr));
+    padding:0;
+    grid-gap: 1rem;
+    width: 90vw;
+    /* @media (min-width: 650px) {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 0fr));
+    } */
+`
+
+export const ProjectGridItem = styled.li`
+    width: 100%;
+    list-style-type: none;
+    justify-self: center;
+    position: relative;
+    max-width:90vw;
+    max-height:220px;
+`
+
+
+export const ProjectHover = styled.div`
+transition:0.4s ease;
+opacity: 0;
+position: absolute;
+top: 0;
+left:0;
+background: #222738;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+&:hover {
+    opacity: 1;
+}
 `
 
 export const ProjectTitle = styled.h3`
-margin-top: 20px;
-margin-bottom:0;
+margin:0;
+padding-bottom: 5px;
 color: ${theme.colors.white};
-font-family: ${theme.fonts.MontserratLight};
-font-size: 20px;
+font-family: ${theme.fonts.RobotoLight};
+font-size: 25px;
 `
 
-export const ModalStyled = styled(Modal)`
-  outline: 0;
-  position: absolute;
-  background-color: ${props => props.theme.modalColor};
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  padding: 10px;
-  transform: translate(-50%, -50%);
-  margin-right: -50%;
-  width: fit-content;
-  border:none;
-  border-radius: 5px;
-  @media (max-width: 750px) {
-      width: 90%;
-  }
-`;
+export const ProjectText = styled.p`
+margin:0;
+max-width:90%;
+font-family: ${theme.fonts.Nunito};
+color: ${theme.colors.gray};
+font-size: 15px;
+text-align: center;
+`
+
+export const ProjectImg = styled.img`
+width:100%;
+min-height:100%;
+max-height:220px;
+`
+
+export const TextLink = styled.a`
+color:${theme.colors.light_blue};
+`

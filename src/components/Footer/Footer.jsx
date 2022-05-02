@@ -9,12 +9,12 @@ const Footer = () => {
       <STYLED.DivIcons>
         <STYLED.IconSpan>
           <a href="https://github.com/Mohamed-sal-ah">
-            <STYLED.GithubIcon />
+            <STYLED.GithubIcon title="Link to Github"/>
           </a>
         </STYLED.IconSpan>
         <STYLED.IconSpan>
           <a href="mailto:mohamedsalahahmed@outlook.com">
-            <STYLED.MailIcon />
+            <STYLED.MailIcon title="Email link"/>
           </a>
         </STYLED.IconSpan>
       </STYLED.DivIcons>

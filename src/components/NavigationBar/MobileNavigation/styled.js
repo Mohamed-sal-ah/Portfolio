@@ -13,12 +13,12 @@ margin:0;
     content: ''; 
     height: 0; 
     position: absolute; 
-    top: -10px; 
+    top: -9px; 
     right:15px;
     width: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid ${props => props.theme.backgroundColor}; 
+    border-bottom: 10px solid ${theme.colors.black_blue.trinary}; 
 }
 `
 
@@ -27,9 +27,9 @@ list-style-type: none;
 `
 
 export const MobileNavButton = styled.button`
-color: ${props => props.theme.fontColor};
-font-family: ${theme.fonts.RobotoRegular};
-font-size: 20px;
+color: ${theme.colors.white};
+font-family: ${theme.fonts.Nunito};
+font-size: 0.85em;
 padding:10px 0;
 min-width: 300px;
 border: none;

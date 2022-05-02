@@ -2,34 +2,21 @@ import React from "react";
 import * as STYLED from "./styled";
 import AboutImage from "../../images/ben-kolde-bs2Ba7t69mM-unsplash.jpg";
 import CommonStyled from "../CommonStyled";
-import theme from "../theme";
-import { ThemeProvider } from "styled-components";
 
-const AboutPage = ({ colorTheme }) => {
-  const isLight = colorTheme === "light";
-  const styledTheme = {
-    backgroundColor: isLight
-      ? theme.colors.white
-      : theme.colors.black_blue.trinary,
-    titleColor: isLight
-      ? theme.colors.blue.secondary
-      : theme.colors.blue.light_blue,
-    textColor: isLight ? theme.colors.gray_blue : theme.colors.white,
-  };
+const AboutPage = () => {
   return (
-    <ThemeProvider theme={styledTheme}>
-      <CommonStyled.AllPageMain name="about">
+      <CommonStyled.AllPageMain name="about" secondary="true">
         <CommonStyled.FullPage>
           <CommonStyled.FlexBox>
             <CommonStyled.ArticleBox>
-              <CommonStyled.TextTitle>About me</CommonStyled.TextTitle>
+              <CommonStyled.TextTitle>ABOUT ME</CommonStyled.TextTitle>
               <CommonStyled.Text>
-                Hi my name is Mohamed Salah Ahmed I'm a Front-end developer. I
-                am very committed, fast learner, curious and want to learn more
-                about web development
+                Hi! My name is Mohamed Salah Ahmed and I'm a Front end developer with a passion for web development.
+                I have worked on a few projects with React and built an app for a startup during my internship. 
+                My future career goal is to become a Fullstack developer, so that I can work on both the Frontend and the Backend.
               </CommonStyled.Text>
             </CommonStyled.ArticleBox>
-            <CommonStyled.TwoSidersBox>
+            <CommonStyled.TwoSidersBox style={{paddingTop:'30px'}}>
               <STYLED.Image
                 src={AboutImage}
                 alt="Photo by Ben Kolde on Unsplash"
@@ -38,7 +25,6 @@ const AboutPage = ({ colorTheme }) => {
           </CommonStyled.FlexBox>
         </CommonStyled.FullPage>
       </CommonStyled.AllPageMain>
-    </ThemeProvider>
   );
 };
 

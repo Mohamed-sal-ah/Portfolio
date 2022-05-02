@@ -7,7 +7,7 @@ export const FooterStyle = styled.footer`
 top:100vh;
 height:100px;
 width:100%;
-background-color:${theme.colors.black_blue.primary};
+background-color:${theme.colors.black_blue.secondary};
 display:flex;
 flex-direction: row;
 align-items:center;
@@ -19,15 +19,12 @@ justify-content: space-between;
 `
 export const Infotext = styled.h4`
 color: ${theme.colors.white};
-transition: 0.2s ease;
 margin:0;
-font-family:${theme.fonts.MontserratRegular};
-font-size: 17px;
+font-family:${theme.fonts.RobotoRegular};
+font-size: 0.7em;
 padding-left: 20px;
-font-weight:bold;
 @media (max-width: 750px) { 
-    font-size:15px;
-    padding-left: 5px;
+    padding-left: 0;
 }
 `
 export const DivIcons = styled.div`

@@ -1,23 +1,26 @@
 @font-face {
-  src: url("./Font/Montserrat-Regular.ttf");
-  font-family: Montserrat-Regular;
-}
-@font-face {
-  src: url("./Font/Montserrat-ExtraLight.ttf");
-  font-family: Montserrat-Light;
+  font-family: Nunito;
+  src: url('./fonts/Nunito-Regular.ttf');
 }
 
 @font-face {
-  src: url("./Font/Roboto-Regular.ttf");
+  font-family: Nunito-Bold;
+  src: url('./fonts/Nunito-ExtraBold.ttf');
+}
+
+@font-face {
+  src: url("./fonts/Roboto-Regular.ttf");
   font-family: Roboto-Regular;
 }
 
 @font-face {
-  src: url("./Font/Roboto-Thin.ttf");
-  font-family: Roboto-Thin;
+  src: url("./fonts/Roboto-Light.ttf");
+  font-family: Roboto-Light;
 }
+
 
 body {
   margin: 0;
-  transition: 0.2s;
+  font-size: clamp(1.15rem, 0.6196rem + 1.7391vw, 1.5rem);
+  background: #171921;
 }

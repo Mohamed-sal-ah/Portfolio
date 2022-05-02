@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from "react-scroll";
 import CommonStyled from "../CommonStyled";
 import theme from '../theme';
-import {ChevronDownOutline} from '@styled-icons/evaicons-outline'
+import {ChevronDownOutline} from '@styled-icons/evaicons-outline/ChevronDownOutline'
 
 export const HomeAllPageMain = styled(CommonStyled.AllPageMain)`
 @media (max-width: 750px) { 
@@ -11,57 +11,44 @@ export const HomeAllPageMain = styled(CommonStyled.AllPageMain)`
 `
 
 export const TextBox = styled(CommonStyled.TwoSidersBox)`
-font-family:${theme.fonts.RobotoRegular};
+@media (max-width: 750px) {  
+  padding:40px 0;
+}
+
+font-family:${theme.fonts.Nunito};
+width:100%;
+max-width:800px;
 height:fit-content;
 display: flex;
 align-self:center;
 align-items:flex-start;
 flex-direction: column;
-  @media (max-width: 750px) { 
-align-items:center;
-}
+`
+
+export const SmallTitle = styled.h6`
+font-size:0.75em;
+color:${theme.colors.light_blue}; 
+margin:0;
 `
 
 export const Title = styled.h1`
-font-size:70px;
-padding:0 20px;
-color: ${props => props.theme.titleColor};
+font-size:2em;
+color: ${props => props.primary ? theme.colors.white : theme.colors.gray};
 margin:0;
-@media (max-width: 750px) { 
-  font-size:60px;  
-}
 `
 
 export const Text = styled.p`
-font-size: 17px;
-padding:0 20px;
-color: ${props => props.theme.textColor};
+font-size: 0.75em;
+padding:5px 0;
+color: ${theme.colors.gray};
 margin:0;
-@media (max-width: 750px) { 
-  font-size:15px;  
-  text-align:center;
-}
 `
 
-export const ButtonLink = styled(Link)`
-font-family: ${theme.fonts.MontserratRegular};
-cursor: pointer;
-background-color: ${theme.colors.green.dark};
-padding:10px 20px;
-font-weight:bold;
-color: ${theme.colors.white};
-font-size: 15px;
-margin: 20px;
-text-transform:uppercase;
-text-decoration:none;
-width:fit-content;
-border-radius: 3px;
+export const ButtonLink = styled(CommonStyled.LinkButton)`
+color: ${theme.colors.light_blue};
+border:2px solid ${theme.colors.light_blue};
 `
 
-export const Image = styled.img`
-height:40vh;
-overflow: hidden;
-`
 
 export const SrollDownLink = styled(Link)`
 @media (max-width: 750px) { 
@@ -74,7 +61,7 @@ cursor:pointer;
 `
 
 export const ChevronDown = styled(ChevronDownOutline)`
-fill:${props => props.theme.textColor};
-width: 80px;
-height: 80px;
+fill:${theme.colors.white};
+width: 4.5rem;
+height: 4.5rem;
 `

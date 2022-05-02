@@ -5,7 +5,6 @@ height:420px;
 width: 300px;
 @media (max-width: 750px) { 
     height:100%;
-    margin-top: 14vh;
 }
 @media (max-width: 550px){
     width:80%;

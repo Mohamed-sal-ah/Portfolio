@@ -1,66 +1,48 @@
-import React, { useState } from "react";
+import React from "react";
 import * as STYLED from "./styled";
 import CommonStyled from "../CommonStyled";
-import ProjectPreview from "../../images/Landcape-pictures-preview.png";
-import theme from "../theme";
-import ProjectModal from "./ProjectModal";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { ThemeProvider } from "styled-components";
+import LandscapePictures from "../../images/landcape-pictures-preview.png";
+import MemoryGame from "../../images/memory-game-preview.png";
+import NotesApp from "../../images/notes-app-preview.png";
 
-const ProjectsPage = ({ colorTheme }) => {
-  const [openModal, setOpenModal] = useState(false);
-  openModal ? disableBodyScroll(document) : enableBodyScroll(document);
-  const isLight = colorTheme === "light";
-  const styledTheme = {
-    backgroundColor: isLight
-      ? theme.colors.light_gray
-      : theme.colors.black_blue.secondary,
-    titleColor: isLight
-      ? theme.colors.blue.secondary
-      : theme.colors.blue.light_blue,
-    textColor: isLight ? theme.colors.gray_blue : theme.colors.white,
-    modalColor: isLight ? theme.colors.white : theme.colors.black_blue.primary,
-    modalTitle: isLight ? theme.colors.black : theme.colors.white,
-  };
+const ProjectsPage = () => {
   return (
-    <ThemeProvider theme={styledTheme}>
       <CommonStyled.AllPageMain name="projects">
-        <STYLED.ModalStyled
-          isOpen={openModal}
-          onRequestClose={() => setOpenModal(false)}
-          style={{
-            overlay: {
-              backgroundColor: isLight
-                ? theme.colors.gradient.light
-                : theme.colors.gradient.dark,
-            },
-          }}
-          ariaHideApp={false}
-          contentLabel="Project Details"
-        >
-          <ProjectModal setOpenModal={setOpenModal} />
-        </STYLED.ModalStyled>
         <CommonStyled.FullPage>
-          <CommonStyled.FlexBox>
-            <CommonStyled.ArticleBox>
-              <CommonStyled.TextTitle>Projects</CommonStyled.TextTitle>
-              <CommonStyled.Text>
-                Here is some projects that i have worked in.
+          <STYLED.ProjectsDiv>
+              <CommonStyled.TextTitle style={{paddingTop:'50px'}}>PROJECTS</CommonStyled.TextTitle>
+              <CommonStyled.Text style={{maxWidth: '90vw'}}>
+                Here are a list projects that I have worked on since I became a Frontend Developer and published to my <STYLED.TextLink href="https://github.com/Mohamed-sal-ah">Github page</STYLED.TextLink>.
               </CommonStyled.Text>
-            </CommonStyled.ArticleBox>
-            <CommonStyled.ArticleBox>
-              <STYLED.ProjectViewButton onClick={() => setOpenModal(true)}>
-                <STYLED.ProjectImg
-                  src={ProjectPreview}
-                  alt="Project Landscape Pictures"
-                />
+          <STYLED.ProjectGrid>
+            <STYLED.ProjectGridItem>
+              <STYLED.ProjectImg src={LandscapePictures} alt="Landscape Pictures preview" />
+              <STYLED.ProjectHover>
                 <STYLED.ProjectTitle>Landscape Pictures</STYLED.ProjectTitle>
-              </STYLED.ProjectViewButton>
-            </CommonStyled.ArticleBox>
-          </CommonStyled.FlexBox>
+                <STYLED.ProjectText>This is a private project of a web app of image gallery build with React native and Typescript. Its uploaded to my <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/LandscapePictures">Github repository</STYLED.TextLink> and hosted on <STYLED.TextLink href="https://mohamed-sal-ah.github.io/LandscapePictures/">Github pages</STYLED.TextLink>.
+                </STYLED.ProjectText>
+              </STYLED.ProjectHover>
+            </STYLED.ProjectGridItem>
+            <STYLED.ProjectGridItem>
+              <STYLED.ProjectImg src={MemoryGame} alt="Memory game preview" />
+              <STYLED.ProjectHover>
+                <STYLED.ProjectTitle>Memory game</STYLED.ProjectTitle>
+                <STYLED.ProjectText>This is a simple Vuejs memory game and it's uploaded to my <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/Memory-game">Github repository</STYLED.TextLink>.
+                </STYLED.ProjectText>
+              </STYLED.ProjectHover>
+            </STYLED.ProjectGridItem>
+            <STYLED.ProjectGridItem>
+              <STYLED.ProjectImg src={NotesApp} alt="Notes app preview" />
+              <STYLED.ProjectHover>
+                <STYLED.ProjectTitle>Notes app</STYLED.ProjectTitle>
+                <STYLED.ProjectText>This is a simple Notes app build with Angular and SCSS and it's uploaded to my <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/Notes-app">Github repository</STYLED.TextLink>.
+                </STYLED.ProjectText>
+              </STYLED.ProjectHover>
+            </STYLED.ProjectGridItem>
+          </STYLED.ProjectGrid>
+          </STYLED.ProjectsDiv>
         </CommonStyled.FullPage>
       </CommonStyled.AllPageMain>
-    </ThemeProvider>
   );
 };
 
