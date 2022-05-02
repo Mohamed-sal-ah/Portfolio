@@ -1,25 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ea2e8ff2.chunk.css",
-    "main.js": "/Portfolio/static/js/main.18afaba6.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.18afaba6.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.0b1196e3.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.0b1196e3.js.map",
-    "static/js/2.b80f3884.chunk.js": "/Portfolio/static/js/2.b80f3884.chunk.js",
-    "static/js/2.b80f3884.chunk.js.map": "/Portfolio/static/js/2.b80f3884.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.faecdb4a.css",
+    "main.js": "/Portfolio/static/js/main.18942b1a.js",
+    "static/media/landcape-pictures-preview.png": "/Portfolio/static/media/landcape-pictures-preview.4b619dfa67b46457375a.png",
+    "static/media/ben-kolde-bs2Ba7t69mM-unsplash.jpg": "/Portfolio/static/media/ben-kolde-bs2Ba7t69mM-unsplash.8e0dbf31e798e52f6ceb.jpg",
+    "static/media/Roboto-Regular.ttf": "/Portfolio/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
+    "static/media/Roboto-Light.ttf": "/Portfolio/static/media/Roboto-Light.0cea39826bd36bbfe330.ttf",
+    "static/media/Nunito-Regular.ttf": "/Portfolio/static/media/Nunito-Regular.fd0c54f3619265ac2f1e.ttf",
+    "static/media/Nunito-ExtraBold.ttf": "/Portfolio/static/media/Nunito-ExtraBold.b00392d60d18b98341ee.ttf",
+    "static/media/memory-game-preview.png": "/Portfolio/static/media/memory-game-preview.2ab1f8bd4e28bde4a4d6.png",
+    "static/media/notes-app-preview.png": "/Portfolio/static/media/notes-app-preview.c756c25056a29441cb55.png",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.ea2e8ff2.chunk.css.map": "/Portfolio/static/css/main.ea2e8ff2.chunk.css.map",
-    "static/js/2.b80f3884.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.b80f3884.chunk.js.LICENSE.txt",
-    "static/media/Landcape-pictures-preview.4b619dfa.png": "/Portfolio/static/media/Landcape-pictures-preview.4b619dfa.png",
-    "static/media/App.css": "/Portfolio/static/media/Roboto-Thin.c38fab23.ttf",
-    "static/media/ben-kolde-bs2Ba7t69mM-unsplash.8e0dbf31.jpg": "/Portfolio/static/media/ben-kolde-bs2Ba7t69mM-unsplash.8e0dbf31.jpg",
-    "static/media/email.3cebfd9e.jpg": "/Portfolio/static/media/email.3cebfd9e.jpg",
-    "static/media/img1.30fbc7de.png": "/Portfolio/static/media/img1.30fbc7de.png"
+    "main.faecdb4a.css.map": "/Portfolio/static/css/main.faecdb4a.css.map",
+    "main.18942b1a.js.map": "/Portfolio/static/js/main.18942b1a.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b1196e3.js",
-    "static/js/2.b80f3884.chunk.js",
-    "static/css/main.ea2e8ff2.chunk.css",
-    "static/js/main.18afaba6.chunk.js"
+    "static/css/main.faecdb4a.css",
+    "static/js/main.18942b1a.js"
   ]
 }
