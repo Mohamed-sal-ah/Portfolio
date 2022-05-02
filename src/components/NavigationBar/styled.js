@@ -119,16 +119,17 @@ transition:0.5s ease;
 export const MobileNavModal = styled(Modal)`
 outline: none;
 position: absolute;
+min-height: 200px;
 background-color:${theme.colors.black_blue.trinary};
-  top: 190px;
-  left: calc(100% - 165px);
-  right: auto;
-  bottom: auto;
-  padding: 10px;
-  transform: translate(-50%, -50%);
-  margin-right: -50%;
-  width: fit-content;
-  border:none;
-  border-radius: 5px;
-  transition: 0.3s ease;
+top: 190px;
+left: calc(100% - 165px);
+right: auto;
+bottom: auto;
+padding: 10px;
+transform: translate(-50%, -50%);
+margin-right: -50%;
+width: fit-content;
+border:none;
+border-radius: 5px;
+transition: 0.3s ease;
 `
