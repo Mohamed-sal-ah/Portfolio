@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.faecdb4a.css",
-    "main.js": "/Portfolio/static/js/main.e03358b0.js",
+    "main.js": "/Portfolio/static/js/main.cb4bfd07.js",
     "static/media/landcape-pictures-preview.png": "/Portfolio/static/media/landcape-pictures-preview.4b619dfa67b46457375a.png",
     "static/media/ben-kolde-bs2Ba7t69mM-unsplash.jpg": "/Portfolio/static/media/ben-kolde-bs2Ba7t69mM-unsplash.8e0dbf31e798e52f6ceb.jpg",
     "static/media/Roboto-Regular.ttf": "/Portfolio/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
@@ -12,10 +12,10 @@
     "static/media/notes-app-preview.png": "/Portfolio/static/media/notes-app-preview.c756c25056a29441cb55.png",
     "index.html": "/Portfolio/index.html",
     "main.faecdb4a.css.map": "/Portfolio/static/css/main.faecdb4a.css.map",
-    "main.e03358b0.js.map": "/Portfolio/static/js/main.e03358b0.js.map"
+    "main.cb4bfd07.js.map": "/Portfolio/static/js/main.cb4bfd07.js.map"
   },
   "entrypoints": [
     "static/css/main.faecdb4a.css",
-    "static/js/main.e03358b0.js"
+    "static/js/main.cb4bfd07.js"
   ]
 }
