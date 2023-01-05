@@ -33,8 +33,9 @@ const ProjectsPage = () => {
                   This is a private project of a web app of image gallery build
                   with React native and Typescript. Its uploaded to my{" "}
                   <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/LandscapePictures">
-                    Github repository.
+                    Github repository
                   </STYLED.TextLink>
+                  .
                 </STYLED.ProjectText>
               </STYLED.ProjectHover>
             </STYLED.ProjectGridItem>
