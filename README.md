@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is a personal Project that i have been working on my personal portfolio.
+This is my personal developer portfolio built with React and styled-components. Portfolio is deployed in  [Github pages](https://mohamed-sal-ah.github.io/Portfolio/).
 
 ## Description
 
