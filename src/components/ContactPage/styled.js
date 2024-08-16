@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../theme'
-import CommonStyled from '../CommonStyled'
+import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
 
 export const ContactDiv = styled.div`
 padding:0px;
@@ -18,7 +18,7 @@ margin:0;
 }
 `
 
-export const ContactLink = styled(CommonStyled.LinkButton)`
+export const ContactLink = styled(ReusableStyles.LinkButton)`
 color: ${theme.colors.red};
 border:2px solid ${theme.colors.red};
 

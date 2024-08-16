@@ -1,18 +1,17 @@
 import React from "react";
 import * as STYLED from "./styled";
-import CommonStyled from "../CommonStyled";
+import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
 
 const HomePage = () => {
   return (
-      <STYLED.HomeAllPageMain name="home">
-        <CommonStyled.FullPage>
-          <CommonStyled.FlexBox>
+      <STYLED.HomeAllPageMain name="home" >
+        <ReusableStyles.FullPage>
+          <ReusableStyles.FlexBox>
             <STYLED.TextBox>
               <STYLED.SmallTitle>Hi, my name is</STYLED.SmallTitle>
-              <STYLED.Title primary>
+              <STYLED.Title>
                 Mohamed Salah Ahmed.
               </STYLED.Title>
-              <STYLED.Title >I'm a Front end Developer</STYLED.Title>
               <STYLED.Text>
                 I am a front-end developer who is very engaged, learning quickly, curious and interested in learning more about web development.
               </STYLED.Text>
@@ -26,7 +25,7 @@ const HomePage = () => {
                 See my work
               </STYLED.ButtonLink>
             </STYLED.TextBox>
-          </CommonStyled.FlexBox>
+          </ReusableStyles.FlexBox>
           <STYLED.SrollDownLink
             spy={false}
             smooth={true}
@@ -36,7 +35,7 @@ const HomePage = () => {
           >
             <STYLED.ChevronDown />
           </STYLED.SrollDownLink>
-        </CommonStyled.FullPage>
+        </ReusableStyles.FullPage>
       </STYLED.HomeAllPageMain>
   );
 };

@@ -1,21 +1,21 @@
 import React from "react";
 import * as STYLED from "./styled";
-import CommonStyled from "../CommonStyled";
-import {Git,ReactLogo,Figma,Html5,Css3,Javascript,Nodejs,Vuejs,Angular} from '@styled-icons/boxicons-logos'
+import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
+import {Git,ReactLogo,Figma,Html5,Css3,Javascript,Nodejs,Vuejs,Angular,Python} from '@styled-icons/boxicons-logos'
 
 const SkillsPage = () => {
   return (
-      <CommonStyled.AllPageMain name="skills" secondary="true">
-        <CommonStyled.FullPage>
+      <ReusableStyles.AllPageMain name="skills" secondary="true">
+        <ReusableStyles.FullPage>
           <STYLED.SkillFlexBox>
-            <CommonStyled.ArticleBox>
-              <CommonStyled.TextTitle>MY SKILLS</CommonStyled.TextTitle>
-              <CommonStyled.Text>
+            <ReusableStyles.ArticleBox>
+              <ReusableStyles.TextTitle>MY SKILLS</ReusableStyles.TextTitle>
+              <ReusableStyles.Text>
                 Here is a list of my tech skills that I have learned during my path
                 to become Frontend Developent which includes UI/UX design. 
-              </CommonStyled.Text>
-            </CommonStyled.ArticleBox>
-            <CommonStyled.TwoSidersBox>
+              </ReusableStyles.Text>
+            </ReusableStyles.ArticleBox>
+            <ReusableStyles.TwoSidersBox>
               <STYLED.SkillIconsGrid>
                   <STYLED.SkillIconItem>
                     <ReactLogo title="React"/>
@@ -45,10 +45,10 @@ const SkillsPage = () => {
                     <Angular title="Angular" />
                   </STYLED.SkillIconItem>
               </STYLED.SkillIconsGrid>
-            </CommonStyled.TwoSidersBox>
+            </ReusableStyles.TwoSidersBox>
           </STYLED.SkillFlexBox>
-        </CommonStyled.FullPage>
-      </CommonStyled.AllPageMain>
+        </ReusableStyles.FullPage>
+      </ReusableStyles.AllPageMain>
   );
 };
 

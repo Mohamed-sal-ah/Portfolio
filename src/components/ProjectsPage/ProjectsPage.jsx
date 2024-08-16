@@ -1,44 +1,27 @@
 import React from "react";
 import * as STYLED from "./styled";
-import CommonStyled from "../CommonStyled";
-import LandscapePictures from "../../images/landcape-pictures-preview.png";
+import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
+import FrontDevBlog from "../../images/Front-Dev-blog-preview.png"
 import MemoryGame from "../../images/memory-game-preview.png";
 import NotesApp from "../../images/notes-app-preview.png";
 
 const ProjectsPage = () => {
   return (
-    <CommonStyled.AllPageMain name="projects">
-      <CommonStyled.FullPage>
+    <ReusableStyles.AllPageMain name="projects">
+      <ReusableStyles.FullPage>
         <STYLED.ProjectsDiv>
-          <CommonStyled.TextTitle style={{ paddingTop: "50px" }}>
+          <ReusableStyles.TextTitle style={{ paddingTop: "50px" }}>
             PROJECTS
-          </CommonStyled.TextTitle>
-          <CommonStyled.Text style={{ maxWidth: "90vw" }}>
+          </ReusableStyles.TextTitle>
+          <ReusableStyles.Text style={{ maxWidth: "90vw" }}>
             Here are a list projects that I have worked on since I became a
             Frontend Developer and published to my{" "}
             <STYLED.TextLink href="https://github.com/Mohamed-sal-ah">
               Github page
             </STYLED.TextLink>
             .
-          </CommonStyled.Text>
+          </ReusableStyles.Text>
           <STYLED.ProjectGrid>
-            <STYLED.ProjectGridItem>
-              <STYLED.ProjectImg
-                src={LandscapePictures}
-                alt="Landscape Pictures preview"
-              />
-              <STYLED.ProjectHover>
-                <STYLED.ProjectTitle>Landscape Pictures</STYLED.ProjectTitle>
-                <STYLED.ProjectText>
-                  This is a private project of a web app of image gallery build
-                  with React native and Typescript. Its uploaded to my{" "}
-                  <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/LandscapePictures">
-                    Github repository
-                  </STYLED.TextLink>
-                  .
-                </STYLED.ProjectText>
-              </STYLED.ProjectHover>
-            </STYLED.ProjectGridItem>
             <STYLED.ProjectGridItem>
               <STYLED.ProjectImg src={MemoryGame} alt="Memory game preview" />
               <STYLED.ProjectHover>
@@ -66,10 +49,24 @@ const ProjectsPage = () => {
                 </STYLED.ProjectText>
               </STYLED.ProjectHover>
             </STYLED.ProjectGridItem>
+            <STYLED.ProjectGridItem>
+              <STYLED.ProjectImg src={FrontDevBlog} alt="Front-dev blog preview" />
+              <STYLED.ProjectHover>
+                <STYLED.ProjectTitle>Front-Dev blog</STYLED.ProjectTitle>
+                <STYLED.ProjectText>
+                  This is a simple static Blog build with Nextjs and Typescript and
+                  it's uploaded to my{" "}
+                  <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/Front-dev-blog">
+                    Github repository
+                  </STYLED.TextLink>
+                  .
+                </STYLED.ProjectText>
+              </STYLED.ProjectHover>
+            </STYLED.ProjectGridItem>
           </STYLED.ProjectGrid>
         </STYLED.ProjectsDiv>
-      </CommonStyled.FullPage>
-    </CommonStyled.AllPageMain>
+      </ReusableStyles.FullPage>
+    </ReusableStyles.AllPageMain>
   );
 };
 

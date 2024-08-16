@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Github } from '@styled-icons/boxicons-logos/Github'
-import { Mail } from '@styled-icons/heroicons-outline/Mail'
+import {Mail} from '@styled-icons/entypo/Mail'
 import theme from '../theme'
 
 export const FooterStyle = styled.footer`

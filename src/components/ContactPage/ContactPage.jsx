@@ -1,20 +1,20 @@
 import React from "react";
 import * as STYLED from "./styled";
-import CommonStyled from "../CommonStyled";
-import Footer from "../Footer";
+import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
+import Footer from "../Footer/Footer";
 
 const ContactPage = () => {
   return (
     <>
-      <CommonStyled.AllPageMain name="contact">
-        <CommonStyled.FullPage>
+      <ReusableStyles.AllPageMain name="contact">
+        <ReusableStyles.FullPage>
             <STYLED.ContactDiv>
-                <CommonStyled.TextTitle>CONTACT</CommonStyled.TextTitle>
-                <CommonStyled.Text>If you want to message me click on the button below.</CommonStyled.Text>
+                <ReusableStyles.TextTitle>CONTACT</ReusableStyles.TextTitle>
+                <ReusableStyles.Text>If you want to message me click on the button below.</ReusableStyles.Text>
                 <STYLED.ContactLink as="a" href="mailto:mohamedsalahahmed@outlook.com">Send me a message</STYLED.ContactLink>
             </STYLED.ContactDiv>
-        </CommonStyled.FullPage>
-      </CommonStyled.AllPageMain>
+        </ReusableStyles.FullPage>
+      </ReusableStyles.AllPageMain>
       <Footer />
     </>
   );

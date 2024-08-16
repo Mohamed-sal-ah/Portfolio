@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as STYLED from "./styled";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import MobileNavigation from "./MobileNavigation/";
+import MobileNavigation from "./MobileNavigation/MobileNavigation";
 
 const NavigationBar = () => {
   const [mobileNav, setMobileNav] = useState(false);

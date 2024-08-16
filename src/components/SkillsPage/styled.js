@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../theme'
-import CommonStyled from "../CommonStyled";
+import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
 
 export const SkillIconsGrid = styled.div`
 display: grid;
@@ -22,7 +22,7 @@ width:75px;
 } 
 `
 
-export const SkillFlexBox = styled(CommonStyled.FlexBox)`
+export const SkillFlexBox = styled(ReusableStyles.FlexBox)`
 @media (max-width :750px) {
     flex-direction: column;
 }
