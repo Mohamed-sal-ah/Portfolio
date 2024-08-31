@@ -30,6 +30,8 @@ const ProjectsPage = () => {
                   This is a simple Vuejs memory game and it's uploaded to my{" "}
                   <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/Memory-game">
                     Github repository
+                  </STYLED.TextLink> and hosted on <STYLED.TextLink href="https://mohamed-sal-ah.github.io/Memory-game/">
+                    Github Pages
                   </STYLED.TextLink>
                   .
                 </STYLED.ProjectText>
