@@ -43,7 +43,7 @@ const ProjectsPage = () => {
               <STYLED.ProjectHover>
                 <STYLED.ProjectTitle>Small Todo list</STYLED.ProjectTitle>
                 <STYLED.ProjectText>
-                  This is a simple todo list app build with GraphQL API and React with Typescript and
+                  This is a simple todo list app build with Apollo GraphQL API and React with Typescript and
                   it's is uploaded to my{" "}
                   <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/small-Todo-list">
                     Github repository
