@@ -1,7 +1,7 @@
 import React from "react";
 import * as STYLED from "./styled";
 import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
-import {Git,ReactLogo,Figma,Html5,Css3,Javascript,Nodejs,Vuejs,Angular,Python} from '@styled-icons/boxicons-logos'
+import {Git,ReactLogo,Figma,Html5,Css3,Javascript,Nodejs,Vuejs,Angular} from '@styled-icons/boxicons-logos'
 
 const SkillsPage = () => {
   return (
