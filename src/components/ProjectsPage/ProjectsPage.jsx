@@ -4,6 +4,7 @@ import * as ReusableStyles from '../ReusableStyles/ReusableStyles'
 import FrontDevBlog from "../../images/Front-Dev-blog-preview.png"
 import MemoryGame from "../../images/memory-game-preview.png";
 import NotesApp from "../../images/notes-app-preview.png";
+import SmallTodoList from "../../images/small-todo-list-preview.png";
 
 const ProjectsPage = () => {
   return (
@@ -31,6 +32,22 @@ const ProjectsPage = () => {
                   <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/Memory-game">
                     Github repository
                   </STYLED.TextLink> and hosted on <STYLED.TextLink href="https://mohamed-sal-ah.github.io/Memory-game/">
+                    Github Pages
+                  </STYLED.TextLink>
+                  .
+                </STYLED.ProjectText>
+              </STYLED.ProjectHover>
+            </STYLED.ProjectGridItem>
+            <STYLED.ProjectGridItem>
+              <STYLED.ProjectImg src={SmallTodoList} alt="Small Todo list preview" />
+              <STYLED.ProjectHover>
+                <STYLED.ProjectTitle>Small Todo list</STYLED.ProjectTitle>
+                <STYLED.ProjectText>
+                  This is a simple todo list app build with GraphQL API and React with Typescript and
+                  it's is uploaded to my{" "}
+                  <STYLED.TextLink href="https://github.com/Mohamed-sal-ah/small-Todo-list">
+                    Github repository
+                  </STYLED.TextLink> and the demo is hosted on <STYLED.TextLink href="https://mohamed-sal-ah.github.io/small-Todo-list/">
                     Github Pages
                   </STYLED.TextLink>
                   .

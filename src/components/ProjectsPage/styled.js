@@ -36,6 +36,7 @@ export const ProjectGridItem = styled.li`
     position: relative;
     max-width:90vw;
     max-height:220px;
+    min-height: 220px;
 `
 
 
